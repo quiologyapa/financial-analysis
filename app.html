@@ -1415,8 +1415,11 @@
             `;
 
             try {
+                // Preprocess image for better OCR
+                const processedImage = await preprocessImage(imageData);
+                
                 const result = await Tesseract.recognize(
-                    imageData,
+                    processedImage,
                     'eng',
                     {
                         logger: (m) => {
@@ -1427,7 +1430,9 @@
                                     progressBar.style.width = progress + '%';
                                 }
                             }
-                        }
+                        },
+                        tessedit_pageseg_mode: Tesseract.PSM.AUTO,
+                        tessedit_char_whitelist: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .$,&-/',
                     }
                 );
 
@@ -1474,38 +1479,80 @@
             }
         }
 
+        // Preprocess image for better OCR accuracy
+        async function preprocessImage(imageData) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    
+                    // Scale up for better recognition
+                    const scale = 2;
+                    canvas.width = img.width * scale;
+                    canvas.height = img.height * scale;
+                    
+                    // Draw scaled image
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    
+                    // Get image data
+                    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    const data = imageData.data;
+                    
+                    // Convert to grayscale and increase contrast
+                    for (let i = 0; i < data.length; i += 4) {
+                        const gray = data[i] * 0.299 + data[i + 1] * 0.587 + data[i + 2] * 0.114;
+                        // Increase contrast
+                        const contrast = 1.5;
+                        const adjusted = ((gray / 255 - 0.5) * contrast + 0.5) * 255;
+                        data[i] = data[i + 1] = data[i + 2] = adjusted;
+                    }
+                    
+                    ctx.putImageData(imageData, 0, 0);
+                    resolve(canvas.toDataURL());
+                };
+                img.src = imageData;
+            });
+        }
+
         function extractReceiptData(text) {
             const lines = text.split('\n').map(line => line.trim()).filter(line => line.length > 0);
             let vendor = null;
             let amount = null;
 
-            // Extract vendor (usually first few lines, but filter out dates and numbers)
-            for (let i = 0; i < Math.min(5, lines.length); i++) {
+            // Extract vendor - look for business name patterns
+            for (let i = 0; i < Math.min(8, lines.length); i++) {
                 const line = lines[i];
-                // Skip lines that look like dates, phone numbers, or are too short
-                if (line.length > 2 && 
-                    !line.match(/^\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}/) && 
-                    !line.match(/^\d{3}[\-\.\s]?\d{3}[\-\.\s]?\d{4}/) &&
-                    !line.match(/^[\d\s\-\.]+$/)) {
-                    vendor = line;
+                // Skip lines that look like dates, phone numbers, addresses, or are too short
+                if (line.length > 2 && line.length < 50 &&
+                    !line.match(/^\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}/) &&  // Dates
+                    !line.match(/^\d{3}[\-\.\s]?\d{3}[\-\.\s]?\d{4}/) &&  // Phone numbers
+                    !line.match(/^[\d\s\-\.#]+$/) &&  // Pure numbers/addresses
+                    !line.match(/^[A-Z]{2}\s+\d{5}/) &&  // State + ZIP
+                    !line.match(/receipt|invoice|order|ticket|trans|seq|ref|card/i) &&  // Receipt keywords
+                    !line.match(/^\$/) &&  // Lines starting with $
+                    line.match(/[a-zA-Z]{3,}/)) {  // Has at least one word with 3+ letters
+                    vendor = line.toUpperCase();
                     break;
                 }
             }
 
-            // Extract amount - look for patterns like "Total", "Amount", or just currency amounts
-            const amountPatterns = [
-                /total[:\s]*\$?\s*(\d+\.?\d{0,2})/i,
-                /amount[:\s]*\$?\s*(\d+\.?\d{0,2})/i,
-                /balance[:\s]*\$?\s*(\d+\.?\d{0,2})/i,
-                /\$\s*(\d+\.\d{2})\s*$/m,
-                /(\d+\.\d{2})\s*$/m
+            // Extract amount - multiple strategies
+            // 1. Look for explicit total keywords
+            const totalPatterns = [
+                /total[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
+                /grand\s*total[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
+                /amount[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
+                /balance[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
+                /subtotal[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
+                /due[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
             ];
 
-            // Try to find total/amount keywords first
-            for (const pattern of amountPatterns) {
+            for (const pattern of totalPatterns) {
                 const match = text.match(pattern);
                 if (match && match[1]) {
-                    const potentialAmount = parseFloat(match[1]);
+                    const cleanAmount = match[1].replace(/,/g, '');
+                    const potentialAmount = parseFloat(cleanAmount);
                     if (potentialAmount > 0 && potentialAmount < 100000) {
                         amount = potentialAmount.toFixed(2);
                         break;
@@ -1513,17 +1560,46 @@
                 }
             }
 
-            // If still no amount, look for the largest dollar amount
+            // 2. If no keyword found, look for $ amounts
+            if (!amount) {
+                const dollarPatterns = [
+                    /\$\s*(\d+[,.]?\d*\.?\d{2})\s*$/m,  // $ at end of line
+                    /\$\s*(\d+[,.]?\d*\.?\d{2})/g,      // Any $ amount
+                ];
+
+                const foundAmounts = [];
+                for (const pattern of dollarPatterns) {
+                    const matches = [...text.matchAll(pattern)];
+                    for (const match of matches) {
+                        const cleanAmount = match[1].replace(/,/g, '');
+                        const value = parseFloat(cleanAmount);
+                        if (value > 0 && value < 100000) {
+                            foundAmounts.push(value);
+                        }
+                    }
+                }
+
+                // Use the largest amount found
+                if (foundAmounts.length > 0) {
+                    amount = Math.max(...foundAmounts).toFixed(2);
+                }
+            }
+
+            // 3. Last resort - look for any decimal amounts
             if (!amount) {
                 const allAmounts = [];
-                const dollarMatches = text.matchAll(/\$?\s*(\d+\.\d{2})/g);
-                for (const match of dollarMatches) {
+                const decimalPattern = /(\d+\.\d{2})(?!\d)/g;
+                const matches = [...text.matchAll(decimalPattern)];
+                
+                for (const match of matches) {
                     const value = parseFloat(match[1]);
-                    if (value > 0 && value < 100000) {
+                    if (value > 1 && value < 100000) {  // At least $1
                         allAmounts.push(value);
                     }
                 }
+                
                 if (allAmounts.length > 0) {
+                    // Use the largest reasonable amount
                     amount = Math.max(...allAmounts).toFixed(2);
                 }
             }
