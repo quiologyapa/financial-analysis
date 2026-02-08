@@ -2006,12 +2006,46 @@
                         localStorage.setItem('googleAccessToken', googleAccessToken);
                         gapi.client.setToken({ access_token: googleAccessToken });
                         updateSyncStatus(true);
-                        await syncToDrive();
+                        
+                        // Search for existing file first
+                        await findOrCreateSyncFile();
+                        
                         alert('Connected! Your data is now syncing with Google Drive.');
                     }
                 },
             });
             client.requestAccessToken();
+        }
+
+        // Find existing sync file or create new one
+        async function findOrCreateSyncFile() {
+            try {
+                // Search for existing file in appDataFolder
+                const response = await gapi.client.drive.files.list({
+                    spaces: 'appDataFolder',
+                    q: "name='financial-analysis-data.json'",
+                    fields: 'files(id, name)',
+                    pageSize: 1
+                });
+
+                if (response.result.files && response.result.files.length > 0) {
+                    // File exists - use it
+                    googleDriveFileId = response.result.files[0].id;
+                    localStorage.setItem('googleDriveFileId', googleDriveFileId);
+                    console.log('Found existing sync file:', googleDriveFileId);
+                    
+                    // Download data from it
+                    await syncFromDrive();
+                } else {
+                    // No file exists - create new one
+                    console.log('No existing file found, will create on first sync');
+                    await syncToDrive();
+                }
+            } catch (error) {
+                console.error('Error finding sync file:', error);
+                // If search fails, just try to sync
+                await syncToDrive();
+            }
         }
 
         // Sign out
