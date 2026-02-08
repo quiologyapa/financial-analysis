@@ -1938,7 +1938,9 @@
         }
 
         function formatDate(dateStr) {
-            const date = new Date(dateStr);
+            // Parse date string as local date to avoid timezone issues
+            const [year, month, day] = dateStr.split('-');
+            const date = new Date(year, month - 1, day);
             return date.toLocaleDateString('en-US', { 
                 year: 'numeric', 
                 month: 'short', 
