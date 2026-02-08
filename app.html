@@ -1173,7 +1173,7 @@
         // Google Drive API Configuration
         const GOOGLE_CLIENT_ID = '594333473788-bgmoolqos0kgsa3390cak635ssh3buup.apps.googleusercontent.com';
         const GOOGLE_API_KEY = 'AIzaSyD7CoH0PjqdHr73hZmNTfFs6CHEYENShzg';
-        const SCOPES = 'https://www.googleapis.com/auth/drive.file';
+        const SCOPES = 'https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/drive.file';
         
         let googleAccessToken = null;
         let googleDriveFileId = localStorage.getItem('googleDriveFileId') || null;
@@ -2109,9 +2109,16 @@
                         body: multipartRequestBody
                     });
 
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        console.error('Drive API Error:', errorData);
+                        throw new Error(`Drive API error: ${errorData.error?.message || response.statusText}`);
+                    }
+
                     const result = await response.json();
                     googleDriveFileId = result.id;
                     localStorage.setItem('googleDriveFileId', googleDriveFileId);
+                    console.log('Created new file in Drive:', googleDriveFileId);
                 } else {
                     // Update existing file
                     multipartRequestBody =
@@ -2123,7 +2130,7 @@
                         fileContent +
                         close_delim;
 
-                    await fetch('https://www.googleapis.com/upload/drive/v3/files/' + googleDriveFileId + '?uploadType=multipart', {
+                    const response = await fetch('https://www.googleapis.com/upload/drive/v3/files/' + googleDriveFileId + '?uploadType=multipart', {
                         method: 'PATCH',
                         headers: {
                             'Authorization': 'Bearer ' + googleAccessToken,
@@ -2131,14 +2138,30 @@
                         },
                         body: multipartRequestBody
                     });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        console.error('Drive API Error:', errorData);
+                        throw new Error(`Drive API error: ${errorData.error?.message || response.statusText}`);
+                    }
+                    
+                    console.log('Updated existing file in Drive');
                 }
                 
                 console.log('Synced to Drive');
             } catch (error) {
                 console.error('Sync to Drive error:', error);
-                if (error.status === 401) {
+                if (error.message && error.message.includes('insufficient')) {
+                    alert('Permission error. Please disconnect and sign in again, making sure to grant all permissions.');
+                    handleGoogleSignOut();
+                } else if (error.status === 401 || error.message.includes('401')) {
                     handleGoogleSignOut();
                     alert('Session expired. Please sign in again.');
+                } else if (error.status === 403 || error.message.includes('403')) {
+                    alert('Access denied. Trying to reconnect...');
+                    // Clear the file ID and try to create a new one
+                    googleDriveFileId = null;
+                    localStorage.removeItem('googleDriveFileId');
                 }
             } finally {
                 isSyncing = false;
