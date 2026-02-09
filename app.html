@@ -1184,7 +1184,7 @@
         let googleAccessToken = null;
         let googleDriveFileId = localStorage.getItem('googleDriveFileId') || null;
         let isSyncing = false;
-        let justSaved = false;  // Flag to prevent immediate download after save
+        let lastSaveTime = 0;  // Timestamp of last save
         
         let expenses = JSON.parse(localStorage.getItem('expenses')) || [];
         let customExpenseCategories = JSON.parse(localStorage.getItem('customExpenseCategories')) || [];
@@ -1416,8 +1416,13 @@
             `;
 
             try {
-                // Preprocess image for better OCR
-                const processedImage = await preprocessImage(imageData);
+                // Try preprocessing, but fall back to original if it fails
+                let processedImage = imageData;
+                try {
+                    processedImage = await preprocessImage(imageData);
+                } catch (prepError) {
+                    console.warn('Preprocessing failed, using original image:', prepError);
+                }
                 
                 const result = await Tesseract.recognize(
                     processedImage,
@@ -1431,9 +1436,7 @@
                                     progressBar.style.width = progress + '%';
                                 }
                             }
-                        },
-                        tessedit_pageseg_mode: Tesseract.PSM.AUTO,
-                        tessedit_char_whitelist: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .$,&-/',
+                        }
                     }
                 );
 
@@ -1482,36 +1485,37 @@
 
         // Preprocess image for better OCR accuracy
         async function preprocessImage(imageData) {
-            return new Promise((resolve) => {
+            return new Promise((resolve, reject) => {
                 const img = new Image();
                 img.onload = () => {
-                    const canvas = document.createElement('canvas');
-                    const ctx = canvas.getContext('2d');
-                    
-                    // Scale up for better recognition
-                    const scale = 2;
-                    canvas.width = img.width * scale;
-                    canvas.height = img.height * scale;
-                    
-                    // Draw scaled image
-                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    
-                    // Get image data
-                    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                    const data = imageData.data;
-                    
-                    // Convert to grayscale and increase contrast
-                    for (let i = 0; i < data.length; i += 4) {
-                        const gray = data[i] * 0.299 + data[i + 1] * 0.587 + data[i + 2] * 0.114;
-                        // Increase contrast
-                        const contrast = 1.5;
-                        const adjusted = ((gray / 255 - 0.5) * contrast + 0.5) * 255;
-                        data[i] = data[i + 1] = data[i + 2] = adjusted;
+                    try {
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        
+                        // Use original size, don't scale (scaling can cause issues)
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        
+                        // Draw image
+                        ctx.drawImage(img, 0, 0);
+                        
+                        // Get image data
+                        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                        const data = imgData.data;
+                        
+                        // Convert to grayscale
+                        for (let i = 0; i < data.length; i += 4) {
+                            const gray = data[i] * 0.299 + data[i + 1] * 0.587 + data[i + 2] * 0.114;
+                            data[i] = data[i + 1] = data[i + 2] = gray;
+                        }
+                        
+                        ctx.putImageData(imgData, 0, 0);
+                        resolve(canvas.toDataURL());
+                    } catch (err) {
+                        reject(err);
                     }
-                    
-                    ctx.putImageData(imageData, 0, 0);
-                    resolve(canvas.toDataURL());
                 };
+                img.onerror = () => reject(new Error('Image load failed'));
                 img.src = imageData;
             });
         }
@@ -2313,8 +2317,14 @@
 
         // Sync FROM Google Drive
         async function syncFromDrive() {
-            if (!googleAccessToken || !googleDriveFileId || isSyncing || justSaved) {
-                if (justSaved) console.log('Skipping download - just saved locally');
+            // Block if we just saved locally (within last 10 seconds)
+            const timeSinceLastSave = Date.now() - lastSaveTime;
+            if (timeSinceLastSave < 10000) {
+                console.log('Blocking download - saved', Math.round(timeSinceLastSave/1000), 'seconds ago');
+                return;
+            }
+            
+            if (!googleAccessToken || !googleDriveFileId || isSyncing) {
                 return;
             }
             
@@ -2386,15 +2396,14 @@
             originalSetItem.apply(this, arguments);
             if ((key === 'expenses' || key === 'customExpenseCategories' || key === 'customIncomeCategories') 
                 && googleAccessToken && !isSyncing) {
-                // Set flag to prevent immediate download
-                justSaved = true;
+                // Record save time to prevent downloads
+                lastSaveTime = Date.now();
+                console.log('Local save detected, blocking downloads for 10 seconds');
+                
                 // Only upload to Drive, don't download (which would overwrite local changes)
                 setTimeout(() => {
                     if (!isSyncing) {
-                        syncToDrive().then(() => {
-                            // Clear flag after 3 seconds
-                            setTimeout(() => { justSaved = false; }, 3000);
-                        });
+                        syncToDrive();
                     }
                 }, 1000);
             }
