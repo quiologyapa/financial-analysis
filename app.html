@@ -1521,18 +1521,33 @@
             let amount = null;
 
             // Extract vendor - look for business name patterns
-            for (let i = 0; i < Math.min(8, lines.length); i++) {
+            for (let i = 0; i < Math.min(10, lines.length); i++) {
                 const line = lines[i];
-                // Skip lines that look like dates, phone numbers, addresses, or are too short
-                if (line.length > 2 && line.length < 50 &&
-                    !line.match(/^\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}/) &&  // Dates
-                    !line.match(/^\d{3}[\-\.\s]?\d{3}[\-\.\s]?\d{4}/) &&  // Phone numbers
-                    !line.match(/^[\d\s\-\.#]+$/) &&  // Pure numbers/addresses
-                    !line.match(/^[A-Z]{2}\s+\d{5}/) &&  // State + ZIP
-                    !line.match(/receipt|invoice|order|ticket|trans|seq|ref|card/i) &&  // Receipt keywords
-                    !line.match(/^\$/) &&  // Lines starting with $
-                    line.match(/[a-zA-Z]{3,}/)) {  // Has at least one word with 3+ letters
-                    vendor = line.toUpperCase();
+                
+                // Clean up the line
+                const cleanLine = line.replace(/[^a-zA-Z0-9\s&'-]/g, ' ').trim();
+                
+                // Skip if too short or too long
+                if (cleanLine.length < 3 || cleanLine.length > 40) continue;
+                
+                // Skip lines that look like:
+                if (cleanLine.match(/^\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}/) ||  // Dates
+                    cleanLine.match(/^\d{3}[\s\-]?\d{3}[\s\-]?\d{4}/) ||      // Phone numbers
+                    cleanLine.match(/^[\d\s\-\.#]+$/) ||                       // Pure numbers
+                    cleanLine.match(/^[A-Z]{2}\s+\d{5}/) ||                    // State + ZIP
+                    cleanLine.match(/receipt|invoice|order|ticket|trans|seq|ref|card|copy|customer|server|table|check|bill/i) ||  // Receipt keywords
+                    cleanLine.match(/^\$/) ||                                  // Lines starting with $
+                    cleanLine.match(/^[0-9]/) ||                               // Lines starting with numbers
+                    cleanLine.match(/welcome|thank|visit|store|location|address|street|avenue|road|blvd|suite/i) || // Common receipt words
+                    !cleanLine.match(/[a-zA-Z]{2,}/)) {                        // Must have at least one 2+ letter word
+                    continue;
+                }
+                
+                // This looks like a vendor name
+                vendor = cleanLine.toUpperCase();
+                
+                // If we found something reasonable, stop
+                if (vendor.split(/\s+/).length <= 5) {  // Not more than 5 words
                     break;
                 }
             }
@@ -1542,10 +1557,10 @@
             const totalPatterns = [
                 /total[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
                 /grand\s*total[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
-                /amount[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
+                /amount\s*due[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
                 /balance[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
-                /subtotal[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
-                /due[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
+                /amount[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
+                /pay[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
             ];
 
             for (const pattern of totalPatterns) {
@@ -1653,17 +1668,22 @@
                 alert(expense.type === 'income' ? 'Income added successfully!' : 'Expense added successfully!');
             }
             
+            // IMPORTANT: Save to localStorage FIRST before resetting form
             localStorage.setItem('expenses', JSON.stringify(expenses));
+            
+            // Update UI immediately
+            updateDashboard();
+            displayExpenses();
 
-            // Reset form
-            this.reset();
+            // Reset form AFTER saving
+            form.reset();
             currentReceipt = null;
             document.getElementById('receiptPreview').innerHTML = '';
             document.getElementById('ocrStatus').innerHTML = '';
             document.getElementById('date').valueAsDate = new Date();
             toggleTransactionType(); // Reset categories
 
-            updateDashboard();
+            // Switch to expenses tab to show the new transaction
             switchTab('expenses');
         });
 
