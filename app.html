@@ -1005,6 +1005,19 @@
             </div>
 
             <div class="form-group">
+                <label>Payment Method *</label>
+                <select id="paymentMethod" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Check">Check</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label>Notes</label>
                 <textarea id="notes" rows="2" placeholder="Optional notes..."></textarea>
             </div>
@@ -1763,6 +1776,7 @@
                         vendor: document.getElementById('vendor').value,
                         category: document.getElementById('category').value,
                         date: document.getElementById('date').value,
+                        paymentMethod: document.getElementById('paymentMethod').value,
                         notes: document.getElementById('notes').value,
                         receipt: currentReceipt
                     };
@@ -1782,6 +1796,7 @@
                     vendor: document.getElementById('vendor').value,
                     category: document.getElementById('category').value,
                     date: document.getElementById('date').value,
+                    paymentMethod: document.getElementById('paymentMethod').value,
                     notes: document.getElementById('notes').value,
                     receipt: currentReceipt,
                     createdAt: new Date().toISOString()
@@ -1914,6 +1929,7 @@
                         <div>
                             <div class="expense-vendor">${expense.vendor}</div>
                             <span class="expense-category">${expense.category}</span>
+                            ${expense.paymentMethod ? `<span class="expense-category" style="margin-left: 8px;">• ${expense.paymentMethod}</span>` : ''}
                         </div>
                         <div>
                             <div class="expense-amount">${sign}$${expense.amount.toFixed(2)}</div>
@@ -1988,6 +2004,7 @@
             document.getElementById('vendor').value = expense.vendor;
             document.getElementById('category').value = expense.category;
             document.getElementById('date').value = expense.date;
+            document.getElementById('paymentMethod').value = expense.paymentMethod || '';
             document.getElementById('notes').value = expense.notes || '';
             
             if (expense.receipt) {
@@ -2123,10 +2140,10 @@
         }
 
         function downloadReport() {
-            let csv = 'Date,Type,Vendor/Source,Category,Amount,Notes\n';
+            let csv = 'Date,Type,Vendor/Source,Category,Payment Method,Amount,Notes\n';
             
             expenses.forEach(e => {
-                csv += `${e.date},"${e.type}","${e.vendor}","${e.category}",${e.amount},"${e.notes || ''}"\n`;
+                csv += `${e.date},"${e.type}","${e.vendor}","${e.category}","${e.paymentMethod || 'N/A'}",${e.amount},"${e.notes || ''}"\n`;
             });
 
             const blob = new Blob([csv], { type: 'text/csv' });
