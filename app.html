@@ -1011,9 +1011,9 @@
 
             <div class="form-group">
                 <label>Receipt Photo</label>
-                <input type="file" id="receiptInput" accept="image/*" capture="environment">
+                <input type="file" id="receiptInput" accept="image/*">
                 <button type="button" class="btn camera-btn" onclick="document.getElementById('receiptInput').click()">
-                    TAKE PHOTO
+                    ADD PHOTO
                 </button>
                 <div id="receiptPreview" class="receipt-preview"></div>
                 <div id="ocrStatus"></div>
@@ -1477,7 +1477,7 @@
                 // Extract vendor and amount
                 const extractedData = extractReceiptData(text);
                 
-                if (extractedData.vendor || extractedData.amount) {
+                if (extractedData.vendor || extractedData.amount || extractedData.date) {
                     // Auto-fill the form
                     if (extractedData.vendor) {
                         document.getElementById('vendor').value = extractedData.vendor;
@@ -1485,10 +1485,14 @@
                     if (extractedData.amount) {
                         document.getElementById('amount').value = extractedData.amount;
                     }
+                    if (extractedData.date) {
+                        document.getElementById('date').value = extractedData.date;
+                    }
 
                     statusDiv.innerHTML = `
                         <div class="ocr-status success">
                             RECEIPT SCANNED SUCCESSFULLY!
+                            ${extractedData.date ? `<br>DATE: ${extractedData.date}` : ''}
                             ${extractedData.vendor ? `<br>VENDOR: ${extractedData.vendor}` : ''}
                             ${extractedData.amount ? `<br>AMOUNT: $${extractedData.amount}` : ''}
                             <br><small>PLEASE VERIFY THE INFORMATION</small>
@@ -1555,48 +1559,131 @@
             const lines = text.split('\n').map(line => line.trim()).filter(line => line.length > 0);
             let vendor = null;
             let amount = null;
+            let date = null;
 
-            // Extract vendor - look for business name patterns
-            for (let i = 0; i < Math.min(10, lines.length); i++) {
+            // Extract date - look for common date formats
+            const datePatterns = [
+                // MM/DD/YYYY or MM/DD/YY
+                /(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})/,
+                // Month DD, YYYY (e.g., "Jan 15, 2025" or "January 15, 2025")
+                /(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{1,2}),?\s+(\d{4})/i,
+                // DD Month YYYY (e.g., "15 Jan 2025")
+                /(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})/i,
+            ];
+
+            for (const line of lines) {
+                for (const pattern of datePatterns) {
+                    const match = line.match(pattern);
+                    if (match) {
+                        try {
+                            let parsedDate;
+                            
+                            // Handle different formats
+                            if (match[0].includes('/') || match[0].includes('-')) {
+                                // MM/DD/YYYY format
+                                let month = parseInt(match[1]);
+                                let day = parseInt(match[2]);
+                                let year = parseInt(match[3]);
+                                
+                                // Handle 2-digit years
+                                if (year < 100) {
+                                    year += year < 50 ? 2000 : 1900;
+                                }
+                                
+                                // Create date in YYYY-MM-DD format
+                                parsedDate = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                            } else {
+                                // Month name format
+                                const monthMap = {
+                                    'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'may': 5, 'jun': 6,
+                                    'jul': 7, 'aug': 8, 'sep': 9, 'oct': 10, 'nov': 11, 'dec': 12
+                                };
+                                
+                                let month, day, year;
+                                if (match[1] && isNaN(match[1])) {
+                                    // Month DD, YYYY format
+                                    month = monthMap[match[1].toLowerCase().substring(0, 3)];
+                                    day = parseInt(match[2]);
+                                    year = parseInt(match[3]);
+                                } else {
+                                    // DD Month YYYY format
+                                    day = parseInt(match[1]);
+                                    month = monthMap[match[2].toLowerCase().substring(0, 3)];
+                                    year = parseInt(match[3]);
+                                }
+                                
+                                parsedDate = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                            }
+                            
+                            // Validate the date is reasonable (not in future, not too old)
+                            const testDate = new Date(parsedDate);
+                            const today = new Date();
+                            const oneYearAgo = new Date();
+                            oneYearAgo.setFullYear(today.getFullYear() - 1);
+                            
+                            if (testDate <= today && testDate >= oneYearAgo) {
+                                date = parsedDate;
+                                console.log('Found receipt date:', date);
+                                break;
+                            }
+                        } catch (e) {
+                            // Invalid date, continue searching
+                            continue;
+                        }
+                    }
+                }
+                if (date) break;
+            }
+
+            // Extract vendor - look for business name in first 15 lines
+            for (let i = 0; i < Math.min(15, lines.length); i++) {
                 const line = lines[i];
                 
-                // Clean up the line
-                const cleanLine = line.replace(/[^a-zA-Z0-9\s&'-]/g, ' ').trim();
+                // Clean up the line - keep letters, numbers, spaces, &, -, '
+                const cleanLine = line.replace(/[^a-zA-Z0-9\s&'\-]/g, ' ').replace(/\s+/g, ' ').trim();
                 
                 // Skip if too short or too long
-                if (cleanLine.length < 3 || cleanLine.length > 40) continue;
+                if (cleanLine.length < 2 || cleanLine.length > 50) continue;
                 
-                // Skip lines that look like:
-                if (cleanLine.match(/^\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}/) ||  // Dates
-                    cleanLine.match(/^\d{3}[\s\-]?\d{3}[\s\-]?\d{4}/) ||      // Phone numbers
-                    cleanLine.match(/^[\d\s\-\.#]+$/) ||                       // Pure numbers
-                    cleanLine.match(/^[A-Z]{2}\s+\d{5}/) ||                    // State + ZIP
-                    cleanLine.match(/receipt|invoice|order|ticket|trans|seq|ref|card|copy|customer|server|table|check|bill/i) ||  // Receipt keywords
-                    cleanLine.match(/^\$/) ||                                  // Lines starting with $
-                    cleanLine.match(/^[0-9]/) ||                               // Lines starting with numbers
-                    cleanLine.match(/welcome|thank|visit|store|location|address|street|avenue|road|blvd|suite/i) || // Common receipt words
-                    !cleanLine.match(/[a-zA-Z]{2,}/)) {                        // Must have at least one 2+ letter word
-                    continue;
+                // Skip obvious non-vendor lines
+                const skipPatterns = [
+                    /^\d{1,2}[\/\-]\d{1,2}/,  // Dates
+                    /^\d{3}[\s\-]\d{3}/,       // Phone numbers  
+                    /^[\d\s\-\.#]+$/,          // Pure numbers
+                    /^[A-Z]{2}\s+\d{5}/,       // State + ZIP
+                    /^\$/,                      // Starting with $
+                    /^[0-9]/,                   // Starting with numbers
+                ];
+                
+                const skipWords = /receipt|invoice|order|copy|customer|server|table|check #|ticket #|trans|register|cashier|thank you|welcome|visit/i;
+                
+                let shouldSkip = false;
+                for (const pattern of skipPatterns) {
+                    if (cleanLine.match(pattern)) {
+                        shouldSkip = true;
+                        break;
+                    }
                 }
                 
-                // This looks like a vendor name
+                if (shouldSkip || cleanLine.match(skipWords)) continue;
+                
+                // Must have at least 2 letters
+                if (!cleanLine.match(/[a-zA-Z]{2,}/)) continue;
+                
+                // Looks like a vendor! Take it
                 vendor = cleanLine.toUpperCase();
-                
-                // If we found something reasonable, stop
-                if (vendor.split(/\s+/).length <= 5) {  // Not more than 5 words
-                    break;
-                }
+                break;
             }
 
             // Extract amount - multiple strategies
             // 1. Look for explicit total keywords
             const totalPatterns = [
-                /total[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
-                /grand\s*total[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
-                /amount\s*due[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
-                /balance[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
-                /amount[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
-                /pay[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/i,
+                /total[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/ig,
+                /grand\s*total[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/ig,
+                /amount\s*due[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/ig,
+                /balance[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/ig,
+                /amount[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/ig,
+                /pay[:\s]*\$?\s*(\d+[,.]?\d*\.?\d{2})/ig,
             ];
 
             for (const pattern of totalPatterns) {
@@ -1655,7 +1742,7 @@
                 }
             }
 
-            return { vendor, amount };
+            return { vendor, amount, date };
         }
 
         // Form submission
