@@ -1687,6 +1687,13 @@
             // Reset form AFTER saving
             form.reset();
             currentReceipt = null;
+            
+            // Explicitly reset file input
+            const receiptInput = document.getElementById('receiptInput');
+            if (receiptInput) {
+                receiptInput.value = '';
+            }
+            
             document.getElementById('receiptPreview').innerHTML = '';
             document.getElementById('ocrStatus').innerHTML = '';
             document.getElementById('date').valueAsDate = new Date();
@@ -2087,10 +2094,18 @@
                     
                     const savedToken = localStorage.getItem('googleAccessToken');
                     if (savedToken) {
+                        console.log('=== GOOGLE API INITIALIZED ===');
                         googleAccessToken = savedToken;
                         gapi.client.setToken({ access_token: savedToken });
                         updateSyncStatus(true);
-                        syncFromDrive();
+                        
+                        // Only download if we have no local data
+                        if (expenses.length === 0) {
+                            console.log('No local data, downloading from Drive');
+                            syncFromDrive();
+                        } else {
+                            console.log('Have local data (', expenses.length, 'transactions), NOT downloading from Drive');
+                        }
                     }
                 } catch (error) {
                     console.error('Google API init error:', error);
@@ -2417,6 +2432,9 @@
         }
 
         // Initialize
+        console.log('=== PAGE LOAD ===');
+        console.log('localStorage expenses:', expenses.length, 'transactions');
+        console.log('First few transactions:', expenses.slice(0, 3));
         updateDashboard();
         displayExpenses();
         displayCustomCategories();
