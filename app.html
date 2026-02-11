@@ -1187,7 +1187,13 @@
             <button class="btn btn-secondary" onclick="exportData()">EXPORT ALL DATA (BACKUP)</button>
             <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">IMPORT DATA (RESTORE)</button>
             <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData(event)">
-            <button class="btn delete-btn" onclick="clearAllData()" style="margin-top: 10px;">CLEAR ALL DATA</button>
+            
+            <h3 style="margin-top: 30px;">BANK IMPORT</h3>
+            <button class="btn btn-secondary" onclick="document.getElementById('bankCsvFile').click()">IMPORT BANK TRANSACTIONS (CSV)</button>
+            <input type="file" id="bankCsvFile" accept=".csv" style="display: none;" onchange="importBankCSV(event)">
+            <p style="color: #999; font-size: 13px; margin-top: 10px;">Download CSV from your bank and upload here. Supported formats: Chase, Bank of America, Wells Fargo, and most standard bank CSVs.</p>
+            
+            <button class="btn delete-btn" onclick="clearAllData()" style="margin-top: 20px;">CLEAR ALL DATA</button>
         </div>
     </div>
 
@@ -1387,6 +1393,165 @@
             };
             reader.readAsText(file);
             event.target.value = '';
+        }
+
+        // Import bank transactions from CSV
+        function importBankCSV(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const csvText = e.target.result;
+                    const transactions = parseBankCSV(csvText);
+                    
+                    if (transactions.length === 0) {
+                        alert('No transactions found in CSV. Please check the file format.');
+                        return;
+                    }
+                    
+                    // Show preview and let user confirm
+                    const preview = transactions.slice(0, 5).map(t => 
+                        `${t.date} - ${t.description} - $${t.amount}`
+                    ).join('\n');
+                    
+                    const message = `Found ${transactions.length} transactions.\n\nFirst few:\n${preview}\n\nImport these as EXPENSES?\n\nYou'll need to assign categories after import.`;
+                    
+                    if (confirm(message)) {
+                        let imported = 0;
+                        transactions.forEach(t => {
+                            // Only import if not duplicate (check date + amount)
+                            const isDuplicate = expenses.some(e => 
+                                e.date === t.date && 
+                                Math.abs(e.amount - t.amount) < 0.01 &&
+                                e.vendor === t.description
+                            );
+                            
+                            if (!isDuplicate) {
+                                const expense = {
+                                    id: Date.now() + imported,
+                                    type: 'expense',
+                                    amount: Math.abs(t.amount),
+                                    vendor: t.description,
+                                    category: 'Other', // User will categorize
+                                    date: t.date,
+                                    paymentMethod: t.paymentMethod || 'Bank Transfer',
+                                    notes: 'Imported from bank CSV',
+                                    createdAt: new Date().toISOString()
+                                };
+                                expenses.push(expense);
+                                imported++;
+                            }
+                        });
+                        
+                        localStorage.setItem('expenses', JSON.stringify(expenses));
+                        alert(`Imported ${imported} transactions!\n\nNote: All imported as "Other" category - please review and categorize in Expenses tab.`);
+                        updateDashboard();
+                        displayExpenses();
+                        switchTab('expenses');
+                    }
+                } catch (error) {
+                    console.error('CSV Import Error:', error);
+                    alert('Error reading CSV file. Please make sure it\'s a valid bank CSV format.');
+                }
+            };
+            reader.readAsText(file);
+            event.target.value = '';
+        }
+
+        // Parse various bank CSV formats
+        function parseBankCSV(csvText) {
+            const lines = csvText.split('\n').map(line => line.trim()).filter(line => line);
+            if (lines.length < 2) return [];
+            
+            // Get header
+            const header = lines[0].toLowerCase();
+            const headerFields = parseCSVLine(header);
+            
+            // Detect column indices
+            const dateIdx = headerFields.findIndex(f => f.includes('date') || f.includes('transaction'));
+            const descIdx = headerFields.findIndex(f => f.includes('description') || f.includes('name') || f.includes('merchant'));
+            const amountIdx = headerFields.findIndex(f => f.includes('amount') || f.includes('debit') || f.includes('withdrawal'));
+            
+            if (dateIdx === -1 || descIdx === -1 || amountIdx === -1) {
+                console.log('CSV columns:', headerFields);
+                throw new Error('Could not detect date, description, or amount columns');
+            }
+            
+            const transactions = [];
+            
+            // Parse data rows
+            for (let i = 1; i < lines.length; i++) {
+                const fields = parseCSVLine(lines[i]);
+                if (fields.length < 3) continue;
+                
+                const dateStr = fields[dateIdx];
+                const description = fields[descIdx];
+                const amountStr = fields[amountIdx];
+                
+                // Parse date (MM/DD/YYYY, MM-DD-YYYY, YYYY-MM-DD)
+                let date;
+                try {
+                    const dateParts = dateStr.match(/(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})/);
+                    if (dateParts) {
+                        let month, day, year;
+                        if (dateParts[3].length === 4) {
+                            // MM/DD/YYYY
+                            month = dateParts[1];
+                            day = dateParts[2];
+                            year = dateParts[3];
+                        } else {
+                            // MM/DD/YY
+                            month = dateParts[1];
+                            day = dateParts[2];
+                            year = parseInt(dateParts[3]) + 2000;
+                        }
+                        date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                    } else if (dateStr.match(/\d{4}-\d{2}-\d{2}/)) {
+                        // Already in YYYY-MM-DD format
+                        date = dateStr;
+                    }
+                } catch (e) {
+                    console.warn('Could not parse date:', dateStr);
+                    continue;
+                }
+                
+                // Parse amount (remove $ , etc)
+                const amount = parseFloat(amountStr.replace(/[$,]/g, ''));
+                
+                if (date && description && !isNaN(amount) && amount !== 0) {
+                    transactions.push({
+                        date,
+                        description: description.substring(0, 100), // Limit length
+                        amount: Math.abs(amount)
+                    });
+                }
+            }
+            
+            return transactions;
+        }
+
+        // Parse CSV line handling quoted fields
+        function parseCSVLine(line) {
+            const fields = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    fields.push(current.trim());
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            fields.push(current.trim());
+            
+            return fields;
         }
 
         function clearAllData() {
