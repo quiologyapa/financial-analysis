@@ -1012,6 +1012,7 @@
                     <option value="Cash">Cash</option>
                     <option value="Check">Check</option>
                     <option value="Debit Card">Debit Card</option>
+                    <option value="POS">POS</option>
                     <option value="Bank Transfer">Bank Transfer</option>
                     <option value="Other">Other</option>
                 </select>
@@ -1024,10 +1025,16 @@
 
             <div class="form-group">
                 <label>Receipt Photo</label>
-                <input type="file" id="receiptInput" accept="image/*">
-                <button type="button" class="btn camera-btn" onclick="document.getElementById('receiptInput').click()">
-                    ADD PHOTO
-                </button>
+                <input type="file" id="receiptInputCamera" accept="image/*" capture="environment" style="display: none;">
+                <input type="file" id="receiptInputGallery" accept="image/*" style="display: none;">
+                <div style="display: flex; gap: 10px;">
+                    <button type="button" class="btn camera-btn" onclick="document.getElementById('receiptInputCamera').click()" style="flex: 1;">
+                        TAKE PHOTO
+                    </button>
+                    <button type="button" class="btn camera-btn" onclick="document.getElementById('receiptInputGallery').click()" style="flex: 1;">
+                        FROM GALLERY
+                    </button>
+                </div>
                 <div id="receiptPreview" class="receipt-preview"></div>
                 <div id="ocrStatus"></div>
             </div>
@@ -1400,8 +1407,8 @@
         // Set today's date as default
         document.getElementById('date').valueAsDate = new Date();
 
-        // Receipt handling with OCR
-        document.getElementById('receiptInput').addEventListener('change', async function(e) {
+        // Receipt handling with OCR - shared handler for both inputs
+        async function handleReceiptUpload(e) {
             const file = e.target.files[0];
             if (file) {
                 const reader = new FileReader();
@@ -1418,7 +1425,11 @@
                 };
                 reader.readAsDataURL(file);
             }
-        });
+        }
+
+        // Attach to both inputs
+        document.getElementById('receiptInputCamera').addEventListener('change', handleReceiptUpload);
+        document.getElementById('receiptInputGallery').addEventListener('change', handleReceiptUpload);
 
         // Compress image to reduce localStorage usage
         async function compressImage(dataURL, maxWidth = 800, quality = 0.7) {
@@ -1836,11 +1847,11 @@
             form.reset();
             currentReceipt = null;
             
-            // Explicitly reset file input
-            const receiptInput = document.getElementById('receiptInput');
-            if (receiptInput) {
-                receiptInput.value = '';
-            }
+            // Explicitly reset both file inputs
+            const receiptInputCamera = document.getElementById('receiptInputCamera');
+            const receiptInputGallery = document.getElementById('receiptInputGallery');
+            if (receiptInputCamera) receiptInputCamera.value = '';
+            if (receiptInputGallery) receiptInputGallery.value = '';
             
             document.getElementById('receiptPreview').innerHTML = '';
             document.getElementById('ocrStatus').innerHTML = '';
