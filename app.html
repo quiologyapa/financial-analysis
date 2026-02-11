@@ -2301,7 +2301,13 @@
         function switchTab(tab) {
             // Update tab buttons
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            event.target.classList.add('active');
+            // Find the button that was clicked
+            const buttons = document.querySelectorAll('.tab');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick').includes(`'${tab}'`)) {
+                    btn.classList.add('active');
+                }
+            });
 
             // Update tab content
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
