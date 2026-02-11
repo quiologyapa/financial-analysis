@@ -940,6 +940,55 @@
                 padding: 14px 8px;
             }
         }
+
+        /* Statement Review Table */
+        .statement-review-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #0f0f0f;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .statement-review-table th {
+            background: #2a2a2a;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .statement-review-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #2a2a2a;
+            font-size: 13px;
+        }
+
+        .statement-review-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .statement-review-table select {
+            background: #1a1a1a;
+            color: white;
+            border: 1px solid #333;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            width: 100%;
+        }
+
+        .ai-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
     </style>
 </head>
 <body>
@@ -1189,11 +1238,33 @@
             <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData(event)">
             
             <h3 style="margin-top: 30px;">BANK IMPORT</h3>
-            <button class="btn btn-secondary" onclick="document.getElementById('bankCsvFile').click()">IMPORT BANK TRANSACTIONS (CSV)</button>
-            <input type="file" id="bankCsvFile" accept=".csv" style="display: none;" onchange="importBankCSV(event)">
-            <p style="color: #999; font-size: 13px; margin-top: 10px;">Download CSV from your bank and upload here. Supported formats: Chase, Bank of America, Wells Fargo, and most standard bank CSVs.</p>
+            
+            <button class="btn btn-secondary" onclick="document.getElementById('bankPdfFile').click()">📄 UPLOAD BANK STATEMENT (PDF) - AI POWERED</button>
+            <input type="file" id="bankPdfFile" accept=".pdf" style="display: none;" onchange="uploadBankStatement(event)">
+            <p style="color: #999; font-size: 13px; margin-top: 5px;">Upload your monthly bank statement PDF. AI will extract and auto-categorize all transactions! (~$0.01 per statement)</p>
+            
+            <div style="margin-top: 15px;">
+                <button class="btn btn-secondary" onclick="document.getElementById('bankCsvFile').click()">IMPORT BANK TRANSACTIONS (CSV)</button>
+                <input type="file" id="bankCsvFile" accept=".csv" style="display: none;" onchange="importBankCSV(event)">
+                <p style="color: #999; font-size: 13px; margin-top: 5px;">Download CSV from your bank and upload here. Manual categorization required.</p>
+            </div>
             
             <button class="btn delete-btn" onclick="clearAllData()" style="margin-top: 20px;">CLEAR ALL DATA</button>
+        </div>
+        
+        <!-- AI Statement Review Modal -->
+        <div id="statementReviewModal" class="modal" style="display: none;">
+            <div style="background: #1a1a1a; padding: 30px; border-radius: 12px; max-width: 900px; margin: 50px auto; max-height: 80vh; overflow-y: auto;">
+                <h2 style="color: white; margin-bottom: 20px;">Review AI-Categorized Transactions</h2>
+                <p style="color: #999; margin-bottom: 20px;" id="statementSummary"></p>
+                
+                <div id="transactionReviewTable" style="margin-bottom: 20px;"></div>
+                
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn" onclick="confirmStatementImport()">IMPORT ALL</button>
+                    <button class="btn btn-secondary" onclick="closeStatementReview()">CANCEL</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1552,6 +1623,263 @@
             fields.push(current.trim());
             
             return fields;
+        }
+
+        // ==================== AI BANK STATEMENT PROCESSING ====================
+        
+        let pendingStatementTransactions = [];
+        const ANTHROPIC_API_ENDPOINT = 'https://api.anthropic.com/v1/messages';
+        
+        async function uploadBankStatement(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            // Show loading
+            if (!confirm('Upload bank statement PDF?\n\nAI will extract and categorize transactions.\n\nYou\'ll need an Anthropic API key (free to get, ~$0.01 per statement).\n\nContinue?')) {
+                event.target.value = '';
+                return;
+            }
+            
+            const apiKey = localStorage.getItem('anthropicApiKey');
+            if (!apiKey) {
+                const key = prompt('Enter your Anthropic API Key:\n\nDon\'t have one?\n1. Go to console.anthropic.com\n2. Sign up (free)\n3. Get API key from Account Settings\n\nPaste your API key here:');
+                if (!key) {
+                    event.target.value = '';
+                    return;
+                }
+                localStorage.setItem('anthropicApiKey', key.trim());
+            }
+            
+            try {
+                alert('Processing statement... This may take 20-30 seconds.');
+                
+                // Read PDF as base64
+                const reader = new FileReader();
+                reader.onload = async function(e) {
+                    try {
+                        const base64Data = e.target.result.split(',')[1];
+                        await processStatementWithAI(base64Data);
+                    } catch (error) {
+                        console.error('Statement processing error:', error);
+                        alert('Error processing statement: ' + error.message + '\n\nCheck console for details.');
+                    }
+                };
+                reader.readAsDataURL(file);
+            } catch (error) {
+                console.error('Upload error:', error);
+                alert('Error uploading file: ' + error.message);
+            }
+            
+            event.target.value = '';
+        }
+        
+        async function processStatementWithAI(base64Pdf) {
+            const apiKey = localStorage.getItem('anthropicApiKey');
+            
+            const prompt = `You are analyzing a bank statement PDF. Extract ALL transactions and categorize them for a restaurant business.
+
+Extract each transaction with:
+1. Date (YYYY-MM-DD format)
+2. Description/Merchant
+3. Amount (positive number, no currency symbols)
+4. Suggested Category (from the list below)
+
+CATEGORIES (choose most appropriate):
+- Food & Supplies
+- Beverage
+- Utilities
+- Rent
+- Payroll
+- Equipment
+- Marketing
+- Maintenance & Repairs
+- Insurance
+- Licenses & Permits
+- Professional Services
+- Office Supplies
+- Sales Tax
+- Payroll Taxes
+- Other Taxes
+- Bank Fees
+- Credit Card Fees
+- Transaction Fees
+- Other
+
+IMPORTANT:
+- Skip: payments to credit cards, transfers between accounts, deposits
+- Only include: actual business expenses (purchases, bills, fees)
+- If unsure about category, use "Other"
+
+Return ONLY valid JSON (no markdown, no backticks):
+{
+  "transactions": [
+    {
+      "date": "2026-02-15",
+      "merchant": "SYSCO FOODS",
+      "amount": 1234.56,
+      "category": "Food & Supplies"
+    }
+  ]
+}`;
+
+            const response = await fetch(ANTHROPIC_API_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'anthropic-version': '2023-06-01',
+                    'x-api-key': apiKey
+                },
+                body: JSON.stringify({
+                    model: 'claude-sonnet-4-20250514',
+                    max_tokens: 4000,
+                    messages: [{
+                        role: 'user',
+                        content: [
+                            {
+                                type: 'document',
+                                source: {
+                                    type: 'base64',
+                                    media_type: 'application/pdf',
+                                    data: base64Pdf
+                                }
+                            },
+                            {
+                                type: 'text',
+                                text: prompt
+                            }
+                        ]
+                    }]
+                })
+            });
+            
+            if (!response.ok) {
+                const error = await response.json();
+                throw new Error(`API Error: ${error.error?.message || response.statusText}`);
+            }
+            
+            const data = await response.json();
+            const responseText = data.content[0].text;
+            
+            // Parse JSON response
+            let jsonData;
+            try {
+                // Try to extract JSON if wrapped in markdown
+                const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+                jsonData = JSON.parse(jsonMatch ? jsonMatch[0] : responseText);
+            } catch (e) {
+                console.error('Raw response:', responseText);
+                throw new Error('Could not parse AI response as JSON');
+            }
+            
+            if (!jsonData.transactions || jsonData.transactions.length === 0) {
+                alert('No transactions found in statement. Please check if the PDF is a valid bank statement.');
+                return;
+            }
+            
+            // Store transactions for review
+            pendingStatementTransactions = jsonData.transactions;
+            
+            // Show review modal
+            showStatementReview();
+        }
+        
+        function showStatementReview() {
+            const modal = document.getElementById('statementReviewModal');
+            const summary = document.getElementById('statementSummary');
+            const table = document.getElementById('transactionReviewTable');
+            
+            summary.textContent = `Found ${pendingStatementTransactions.length} transactions. Review and adjust categories before importing.`;
+            
+            // Build review table
+            let html = `
+                <table class="statement-review-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Merchant</th>
+                            <th style="text-align: right;">Amount</th>
+                            <th>Category <span class="ai-badge">AI</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            pendingStatementTransactions.forEach((t, i) => {
+                const allCategories = [
+                    ...defaultExpenseCategories,
+                    ...customExpenseCategories
+                ].sort();
+                
+                html += `
+                    <tr>
+                        <td>${t.date}</td>
+                        <td>${t.merchant}</td>
+                        <td style="text-align: right;">$${t.amount.toFixed(2)}</td>
+                        <td>
+                            <select id="category_${i}">
+                                ${allCategories.map(cat => 
+                                    `<option value="${cat}" ${cat === t.category ? 'selected' : ''}>${cat}</option>`
+                                ).join('')}
+                            </select>
+                        </td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            table.innerHTML = html;
+            
+            modal.style.display = 'block';
+        }
+        
+        function closeStatementReview() {
+            document.getElementById('statementReviewModal').style.display = 'none';
+            pendingStatementTransactions = [];
+        }
+        
+        function confirmStatementImport() {
+            // Update categories from user selections
+            pendingStatementTransactions.forEach((t, i) => {
+                const select = document.getElementById(`category_${i}`);
+                if (select) {
+                    t.category = select.value;
+                }
+            });
+            
+            // Import transactions
+            let imported = 0;
+            pendingStatementTransactions.forEach(t => {
+                // Check for duplicates
+                const isDuplicate = expenses.some(e => 
+                    e.date === t.date && 
+                    Math.abs(e.amount - t.amount) < 0.01 &&
+                    e.vendor.toLowerCase() === t.merchant.toLowerCase()
+                );
+                
+                if (!isDuplicate) {
+                    const expense = {
+                        id: Date.now() + imported,
+                        type: 'expense',
+                        amount: t.amount,
+                        vendor: t.merchant,
+                        category: t.category,
+                        date: t.date,
+                        paymentMethod: 'Bank Transfer',
+                        notes: 'AI-imported from bank statement',
+                        createdAt: new Date().toISOString()
+                    };
+                    expenses.push(expense);
+                    imported++;
+                }
+            });
+            
+            localStorage.setItem('expenses', JSON.stringify(expenses));
+            
+            closeStatementReview();
+            alert(`Successfully imported ${imported} transactions!\n\nAll transactions have been categorized by AI.`);
+            updateDashboard();
+            displayExpenses();
+            switchTab('expenses');
         }
 
         function clearAllData() {
