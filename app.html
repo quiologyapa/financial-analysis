@@ -1273,6 +1273,38 @@
     </div>
 
     <script>
+        // IMPORTANT: Define switchTab FIRST so it's available immediately
+        function switchTab(tab) {
+            // Update tab buttons
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            // Find the button that was clicked
+            const buttons = document.querySelectorAll('.tab');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${tab}'`)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update tab content
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            const targetTab = document.getElementById(tab + 'Tab');
+            if (targetTab) {
+                targetTab.classList.add('active');
+            }
+
+            // Refresh content (these functions may not exist yet, so check)
+            if (tab === 'expenses' && typeof displayExpenses === 'function') {
+                displayExpenses();
+                if (typeof populateFilterCategories === 'function') {
+                    populateFilterCategories();
+                }
+            } else if (tab === 'reports' && typeof generateReport === 'function') {
+                generateReport();
+            } else if (tab === 'settings' && typeof displayCustomCategories === 'function') {
+                displayCustomCategories();
+            }
+        }
+
         // Google Drive API Configuration
         const GOOGLE_CLIENT_ID = '594333473788-bgmoolqos0kgsa3390cak635ssh3buup.apps.googleusercontent.com';
         const GOOGLE_API_KEY = 'AIzaSyD7CoH0PjqdHr73hZmNTfFs6CHEYENShzg';
@@ -2298,31 +2330,6 @@
             switchTab('expenses');
         });
 
-        function switchTab(tab) {
-            // Update tab buttons
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            // Find the button that was clicked
-            const buttons = document.querySelectorAll('.tab');
-            buttons.forEach(btn => {
-                if (btn.getAttribute('onclick').includes(`'${tab}'`)) {
-                    btn.classList.add('active');
-                }
-            });
-
-            // Update tab content
-            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-            document.getElementById(tab + 'Tab').classList.add('active');
-
-            // Refresh content
-            if (tab === 'expenses') {
-                displayExpenses();
-                populateFilterCategories();
-            } else if (tab === 'reports') {
-                generateReport();
-            } else if (tab === 'settings') {
-                displayCustomCategories();
-            }
-        }
 
         function populateFilterCategories() {
             const filterCategory = document.getElementById('filterCategory');
