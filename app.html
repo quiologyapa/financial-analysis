@@ -1658,7 +1658,7 @@
                 reader.onload = async function(e) {
                     try {
                         const base64Data = e.target.result.split(',')[1];
-                        await processStatementWithAI(base64Data);
+                        await processStatementWithAI(base64Data, apiKey);
                     } catch (error) {
                         console.error('Statement processing error:', error);
                         alert('Error processing statement: ' + error.message + '\n\nCheck console for details.');
@@ -1671,116 +1671,59 @@
             }
             
             event.target.value = '';
+            */
         }
         
-        async function processStatementWithAI(base64Pdf) {
-            const apiKey = localStorage.getItem('anthropicApiKey');
+        async function processStatementWithAI(base64Pdf, apiKey) {
+            console.log('Sending PDF to Netlify serverless function...');
             
-            const prompt = `You are analyzing a bank statement PDF. Extract ALL transactions and categorize them for a restaurant business.
-
-Extract each transaction with:
-1. Date (YYYY-MM-DD format)
-2. Description/Merchant
-3. Amount (positive number, no currency symbols)
-4. Suggested Category (from the list below)
-
-CATEGORIES (choose most appropriate):
-- Food & Supplies
-- Beverage
-- Utilities
-- Rent
-- Payroll
-- Equipment
-- Marketing
-- Maintenance & Repairs
-- Insurance
-- Licenses & Permits
-- Professional Services
-- Office Supplies
-- Sales Tax
-- Payroll Taxes
-- Other Taxes
-- Bank Fees
-- Credit Card Fees
-- Transaction Fees
-- Other
-
-IMPORTANT:
-- Skip: payments to credit cards, transfers between accounts, deposits
-- Only include: actual business expenses (purchases, bills, fees)
-- If unsure about category, use "Other"
-
-Return ONLY valid JSON (no markdown, no backticks):
-{
-  "transactions": [
-    {
-      "date": "2026-02-15",
-      "merchant": "SYSCO FOODS",
-      "amount": 1234.56,
-      "category": "Food & Supplies"
-    }
-  ]
-}`;
-
-            const response = await fetch(ANTHROPIC_API_ENDPOINT, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'anthropic-version': '2023-06-01',
-                    'x-api-key': apiKey
-                },
-                body: JSON.stringify({
-                    model: 'claude-sonnet-4-20250514',
-                    max_tokens: 4000,
-                    messages: [{
-                        role: 'user',
-                        content: [
-                            {
-                                type: 'document',
-                                source: {
-                                    type: 'base64',
-                                    media_type: 'application/pdf',
-                                    data: base64Pdf
-                                }
-                            },
-                            {
-                                type: 'text',
-                                text: prompt
-                            }
-                        ]
-                    }]
-                })
-            });
+            // IMPORTANT: Update this URL after deploying to Netlify!
+            // Format: https://YOUR-SITE-NAME.netlify.app/.netlify/functions/process-statement
+            const FUNCTION_URL = 'https://YOUR-SITE-NAME.netlify.app/.netlify/functions/process-statement';
             
-            if (!response.ok) {
-                const error = await response.json();
-                throw new Error(`API Error: ${error.error?.message || response.statusText}`);
-            }
-            
-            const data = await response.json();
-            const responseText = data.content[0].text;
-            
-            // Parse JSON response
-            let jsonData;
             try {
-                // Try to extract JSON if wrapped in markdown
-                const jsonMatch = responseText.match(/\{[\s\S]*\}/);
-                jsonData = JSON.parse(jsonMatch ? jsonMatch[0] : responseText);
-            } catch (e) {
-                console.error('Raw response:', responseText);
-                throw new Error('Could not parse AI response as JSON');
+                const response = await fetch(FUNCTION_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        pdfBase64: base64Pdf,
+                        apiKey: apiKey
+                    })
+                });
+                
+                console.log('Server response status:', response.status);
+                
+                if (!response.ok) {
+                    let errorMsg;
+                    try {
+                        const errorData = await response.json();
+                        errorMsg = errorData.error || response.statusText;
+                        console.error('Server error:', errorData);
+                    } catch (e) {
+                        errorMsg = response.statusText;
+                    }
+                    throw new Error(`Server error (${response.status}): ${errorMsg}`);
+                }
+                
+                const jsonData = await response.json();
+                console.log(`Received ${jsonData.transactions.length} transactions from AI`);
+                
+                if (!jsonData.transactions || jsonData.transactions.length === 0) {
+                    alert('No transactions found in statement. Please check if the PDF is a valid bank statement.');
+                    return;
+                }
+                
+                // Store transactions for review
+                pendingStatementTransactions = jsonData.transactions;
+                
+                // Show review modal
+                showStatementReview();
+            } catch (error) {
+                console.error('Error calling serverless function:', error);
+                throw new Error(`Failed to process statement: ${error.message}\n\nMake sure you've deployed the Netlify function and updated the FUNCTION_URL in the code.`);
             }
-            
-            if (!jsonData.transactions || jsonData.transactions.length === 0) {
-                alert('No transactions found in statement. Please check if the PDF is a valid bank statement.');
-                return;
-            }
-            
-            // Store transactions for review
-            pendingStatementTransactions = jsonData.transactions;
-            
-            // Show review modal
-            showStatementReview();
         }
         
         function showStatementReview() {
