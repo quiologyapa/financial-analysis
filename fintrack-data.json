@@ -1,0 +1,4525 @@
+{
+  "transactions": [
+    {
+      "id": 1774328587038,
+      "type": "expense",
+      "amount": 12,
+      "vendor": "Maintenance Fee",
+      "category": "Bank Fees",
+      "date": "2026-01-31",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587039,
+      "type": "income",
+      "amount": 500,
+      "vendor": "ACH Deposit Square Inc SQ260130 T2202338",
+      "category": "Food Sales",
+      "date": "2026-01-30",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587040,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-30",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587041,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit Square Inc SQ260130 T2202331",
+      "category": "Food Sales",
+      "date": "2026-01-30",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587042,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 800201F337",
+      "category": "Professional Services",
+      "date": "2026-01-30",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587043,
+      "type": "income",
+      "amount": 300,
+      "vendor": "ACH Deposit Square Inc SQ260129 T2202175",
+      "category": "Food Sales",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587044,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit Square Inc SQ260129 T2202169",
+      "category": "Food Sales",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587045,
+      "type": "income",
+      "amount": 400,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587046,
+      "type": "income",
+      "amount": 600,
+      "vendor": "ACH Deposit Square Inc SQ260129 T2202169",
+      "category": "Food Sales",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587047,
+      "type": "income",
+      "amount": 400,
+      "vendor": "ACH Deposit Square Inc SQ260129 T2202169",
+      "category": "Food Sales",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587048,
+      "type": "expense",
+      "amount": 1968.04,
+      "vendor": "Check #4741 - Check                        F",
+      "category": "Food & Supplies",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587049,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 800201F337",
+      "category": "Professional Services",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587050,
+      "type": "expense",
+      "amount": 347.2,
+      "vendor": "ACH Payment CPENERGY ENTEX ENT ACH FR DIRECT DEBITING",
+      "category": "Utilities",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587051,
+      "type": "expense",
+      "amount": 223.07,
+      "vendor": "Check #4742 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587052,
+      "type": "expense",
+      "amount": 134.31,
+      "vendor": "Check #4739 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587053,
+      "type": "expense",
+      "amount": 403.52,
+      "vendor": "Check #4738 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587054,
+      "type": "expense",
+      "amount": 1457,
+      "vendor": "Check #5657 - Check                        F",
+      "category": "Food & Supplies",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587055,
+      "type": "income",
+      "amount": 300,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587056,
+      "type": "expense",
+      "amount": 923.26,
+      "vendor": "Check #5660 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587057,
+      "type": "income",
+      "amount": 2900,
+      "vendor": "transfer credit",
+      "category": "Other Income",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587058,
+      "type": "expense",
+      "amount": 259.15,
+      "vendor": "Check #5662 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587059,
+      "type": "expense",
+      "amount": 429,
+      "vendor": "Check #5636 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587060,
+      "type": "transfer",
+      "amount": 3900,
+      "vendor": "Internet Withdrawal IB XFR TO COMMERCIAL XXXXXX4534",
+      "category": "Transfer",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587061,
+      "type": "income",
+      "amount": 2000,
+      "vendor": "ACH Deposit Square Inc SQ260127 T2201850",
+      "category": "Food Sales",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587062,
+      "type": "expense",
+      "amount": 845.65,
+      "vendor": "Check #5635 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587063,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587064,
+      "type": "income",
+      "amount": 4203.76,
+      "vendor": "ACH Deposit UBER USA, LLC PARTNER",
+      "category": "Delivery/Takeout",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587065,
+      "type": "expense",
+      "amount": 789.36,
+      "vendor": "Check #5659 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587066,
+      "type": "expense",
+      "amount": 351.1,
+      "vendor": "ACH Payment THE HARTFORD     INSPMTCL",
+      "category": "Insurance",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587067,
+      "type": "transfer",
+      "amount": 800.86,
+      "vendor": "ACH Payment AMEX EPAYMENT    ACH PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587068,
+      "type": "expense",
+      "amount": 82.62,
+      "vendor": "ACH Payment IRS              USATAXPYMT",
+      "category": "Payroll Taxes",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587069,
+      "type": "income",
+      "amount": 17.82,
+      "vendor": "ACH Payment Square Inc PAYR TAX T2201717",
+      "category": "Food Sales",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587070,
+      "type": "transfer",
+      "amount": 1000,
+      "vendor": "Internet Withdrawal IB XFR TO COMMERCIAL XXXXXX4534",
+      "category": "Transfer",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587071,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587072,
+      "type": "transfer",
+      "amount": 82,
+      "vendor": "ACH Payment SVCING SOLUTIONS BILLPAY BILLPAY",
+      "category": "Credit Card Payment",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587073,
+      "type": "income",
+      "amount": 2000,
+      "vendor": "ACH Deposit Square Inc SQ260126 T2201683",
+      "category": "Food Sales",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587074,
+      "type": "transfer",
+      "amount": 90,
+      "vendor": "ACH Payment CHASE CREDIT CRD AUTOPAYBUS",
+      "category": "Credit Card Payment",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587075,
+      "type": "expense",
+      "amount": 857.16,
+      "vendor": "Check #5664 - Check",
+      "category": "Payroll",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587076,
+      "type": "transfer",
+      "amount": 510,
+      "vendor": "Internet Withdrawal IB XFR TO COMMERCIAL XXXXXX4534",
+      "category": "Transfer",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587077,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587078,
+      "type": "income",
+      "amount": 2000,
+      "vendor": "ACH Deposit Square Inc SQ260123 T2201404",
+      "category": "Food Sales",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587079,
+      "type": "expense",
+      "amount": 499,
+      "vendor": "Check #5663 - Check",
+      "category": "Payroll",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587080,
+      "type": "transfer",
+      "amount": 500,
+      "vendor": "Internet Withdrawal IB XFR TO COMMERCIAL XXXXXX4534",
+      "category": "Transfer",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587081,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587082,
+      "type": "expense",
+      "amount": 304.76,
+      "vendor": "ACH Payment IRS              USATAXPYMT",
+      "category": "Payroll Taxes",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587083,
+      "type": "transfer",
+      "amount": 336.03,
+      "vendor": "ACH Payment AMEX EPAYMENT    ACH PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587084,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit Square Inc SQ260122 T2201239",
+      "category": "Food Sales",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587085,
+      "type": "expense",
+      "amount": 565.2,
+      "vendor": "Check #5665 - Check",
+      "category": "Payroll",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587086,
+      "type": "expense",
+      "amount": 289,
+      "vendor": "Check #5658 - Check",
+      "category": "Payroll",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587087,
+      "type": "transfer",
+      "amount": 97.53,
+      "vendor": "ACH Payment Credit Key       Credit Key",
+      "category": "Credit Card Payment",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587088,
+      "type": "expense",
+      "amount": 553.99,
+      "vendor": "Check #5667 - Check",
+      "category": "Payroll",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587089,
+      "type": "expense",
+      "amount": 553.99,
+      "vendor": "Check #5668 - Check",
+      "category": "Payroll",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587090,
+      "type": "income",
+      "amount": 65.73,
+      "vendor": "ACH Payment Square Inc PAYR TAX T2201080",
+      "category": "Food Sales",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587091,
+      "type": "expense",
+      "amount": 1820.77,
+      "vendor": "Check #4733 - Check",
+      "category": "Food & Supplies",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587092,
+      "type": "expense",
+      "amount": 875,
+      "vendor": "Check #5666 - Check",
+      "category": "Payroll",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587093,
+      "type": "income",
+      "amount": 2000,
+      "vendor": "ACH Deposit Square Inc SQ260121 T2201064",
+      "category": "Food Sales",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587094,
+      "type": "expense",
+      "amount": 542.61,
+      "vendor": "Check #5661 - Check",
+      "category": "Payroll",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587095,
+      "type": "expense",
+      "amount": 312.84,
+      "vendor": "ACH Payment gamsa.io gamsa.io",
+      "category": "Equipment",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587096,
+      "type": "expense",
+      "amount": 94.36,
+      "vendor": "Check #4734 - Check",
+      "category": "Payroll",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587097,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587098,
+      "type": "expense",
+      "amount": 1550,
+      "vendor": "Check #5656 - Check",
+      "category": "Food & Supplies",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587099,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587100,
+      "type": "transfer",
+      "amount": 500,
+      "vendor": "ACH Payment AMEX EPAYMENT    ACH PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587101,
+      "type": "transfer",
+      "amount": 1247,
+      "vendor": "ACH Payment AMEX EPAYMENT    ACH PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587102,
+      "type": "transfer",
+      "amount": 6500,
+      "vendor": "Internet Withdrawal IB XFR TO COMMERCIAL XXXXXX4534",
+      "category": "Transfer",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587103,
+      "type": "income",
+      "amount": 5659.81,
+      "vendor": "ACH Deposit UBER USA, LLC PARTNER",
+      "category": "Delivery/Takeout",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587104,
+      "type": "expense",
+      "amount": 10200,
+      "vendor": "ACH Payment GJBRAUNCORPORATI SIGONFILE",
+      "category": "Rent",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587105,
+      "type": "expense",
+      "amount": 1112,
+      "vendor": "Check #5653 - Check",
+      "category": "Food & Supplies",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587106,
+      "type": "expense",
+      "amount": 760,
+      "vendor": "Check #4737 - Check",
+      "category": "Payroll",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587107,
+      "type": "expense",
+      "amount": 400,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587108,
+      "type": "expense",
+      "amount": 150.21,
+      "vendor": "ACH Payment COMCAST-XFINITY CABLE SVCS 800-266-2278",
+      "category": "Utilities",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587109,
+      "type": "expense",
+      "amount": 86.6,
+      "vendor": "ACH Payment John Moore Pest SIGONFILE 713-730-2525",
+      "category": "Maintenance & Repairs",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587110,
+      "type": "expense",
+      "amount": 1615.96,
+      "vendor": "Check #4726 - Check",
+      "category": "Food & Supplies",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587111,
+      "type": "transfer",
+      "amount": 1300,
+      "vendor": "Internet Withdrawal IB XFR TO COMMERCIAL XXXXXX4534",
+      "category": "Transfer",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587112,
+      "type": "income",
+      "amount": 25000,
+      "vendor": "ACH Deposit Pipe Capital LLC Pipe PMT",
+      "category": "Other Income",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587113,
+      "type": "income",
+      "amount": 900,
+      "vendor": "ACH Deposit Square Inc SQ260116 T2200472",
+      "category": "Food Sales",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587114,
+      "type": "expense",
+      "amount": 875,
+      "vendor": "Check #4735 - Check",
+      "category": "Payroll",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587115,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587116,
+      "type": "expense",
+      "amount": 331.5,
+      "vendor": "Check #5654 - Check",
+      "category": "Payroll",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587117,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587118,
+      "type": "income",
+      "amount": 860,
+      "vendor": "ACH Deposit Square Inc SQ260115 T2200309",
+      "category": "Food Sales",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587119,
+      "type": "expense",
+      "amount": 560,
+      "vendor": "Check #4732 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587120,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit Square Inc SQ260114 T2200134",
+      "category": "Food Sales",
+      "date": "2026-01-14",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587121,
+      "type": "expense",
+      "amount": 30,
+      "vendor": "Return Check Chrg Item(s) Presented 01/13/2026",
+      "category": "Payroll",
+      "date": "2026-01-14",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587122,
+      "type": "expense",
+      "amount": 750,
+      "vendor": "Check #4731 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-14",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587123,
+      "type": "income",
+      "amount": 50,
+      "vendor": "ACH Deposit Square Inc SQ260114 T2200140",
+      "category": "Food Sales",
+      "date": "2026-01-14",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587124,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-14",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587125,
+      "type": "income",
+      "amount": 100,
+      "vendor": "ACH Deposit Square Inc SQ260114 T2200134",
+      "category": "Food Sales",
+      "date": "2026-01-14",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587126,
+      "type": "expense",
+      "amount": 1440,
+      "vendor": "Check #5652 - Check                        F",
+      "category": "Food & Supplies",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587127,
+      "type": "expense",
+      "amount": 724,
+      "vendor": "Check #4720 - Check",
+      "category": "Payroll",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587128,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587129,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit Square Inc SQ260113 T2199981",
+      "category": "Food Sales",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587130,
+      "type": "expense",
+      "amount": 520,
+      "vendor": "Check #4730 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587131,
+      "type": "transfer",
+      "amount": 1200,
+      "vendor": "Transfer debit",
+      "category": "Transfer",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587132,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 800201F337",
+      "category": "Professional Services",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587133,
+      "type": "income",
+      "amount": 4800.83,
+      "vendor": "ACH Deposit UBER USA, LLC PARTNER",
+      "category": "Delivery/Takeout",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587134,
+      "type": "transfer",
+      "amount": 1450.18,
+      "vendor": "ACH Payment CAPITAL ON TAP   WHG5Q4X",
+      "category": "Credit Card Payment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587135,
+      "type": "expense",
+      "amount": 162,
+      "vendor": "ACH Payment LANE EQUIPMENT   CORP COLL",
+      "category": "Equipment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587136,
+      "type": "income",
+      "amount": 2500,
+      "vendor": "ACH Deposit Square Inc SQ260112 T2199807",
+      "category": "Food Sales",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587137,
+      "type": "expense",
+      "amount": 450,
+      "vendor": "Check #4728 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587138,
+      "type": "expense",
+      "amount": 775,
+      "vendor": "Check #4729 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587139,
+      "type": "transfer",
+      "amount": 140,
+      "vendor": "Transfer debit",
+      "category": "Transfer",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587140,
+      "type": "transfer",
+      "amount": 700,
+      "vendor": "Internet Withdrawal IB XFR TO COMMERCIAL XXXXXX4534",
+      "category": "Transfer",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587141,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 800201F337",
+      "category": "Professional Services",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587142,
+      "type": "income",
+      "amount": 125,
+      "vendor": "ACH Deposit Square Inc SQ260112 T2199807",
+      "category": "Food Sales",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587143,
+      "type": "expense",
+      "amount": 141.63,
+      "vendor": "Check #4724 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587144,
+      "type": "expense",
+      "amount": 208.46,
+      "vendor": "Check #4722 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587145,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit Square Inc SQ260109 T2199534",
+      "category": "Food Sales",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587146,
+      "type": "transfer",
+      "amount": 250,
+      "vendor": "Transfer debit",
+      "category": "Transfer",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587147,
+      "type": "transfer",
+      "amount": 97.53,
+      "vendor": "ACH Payment Credit Key       CreditFKey",
+      "category": "Credit Card Payment",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587148,
+      "type": "income",
+      "amount": 80,
+      "vendor": "ACH Deposit Square Inc SQ260109 T2199540",
+      "category": "Food Sales",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587149,
+      "type": "expense",
+      "amount": 400,
+      "vendor": "Check #5655 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587150,
+      "type": "expense",
+      "amount": 526.39,
+      "vendor": "Check #4723 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587151,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 800201F337",
+      "category": "Professional Services",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587152,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit Square Inc SQ260109 T2199534",
+      "category": "Food Sales",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587153,
+      "type": "expense",
+      "amount": 600,
+      "vendor": "Check #4725 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587154,
+      "type": "income",
+      "amount": 210,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-08",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587155,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 800201F337",
+      "category": "Professional Services",
+      "date": "2026-01-08",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587156,
+      "type": "expense",
+      "amount": 30,
+      "vendor": "Return Check Chrg Item(s) Presented 01/06/2026",
+      "category": "Payroll",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587157,
+      "type": "expense",
+      "amount": 1485,
+      "vendor": "Check #4717 - Check                        F",
+      "category": "Food & Supplies",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587158,
+      "type": "income",
+      "amount": 915,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587159,
+      "type": "income",
+      "amount": 900,
+      "vendor": "ACH Deposit Square Inc SQ260107 T2199218",
+      "category": "Food Sales",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587160,
+      "type": "expense",
+      "amount": 376.16,
+      "vendor": "Check #4721 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587161,
+      "type": "expense",
+      "amount": 2359.16,
+      "vendor": "Check #4716 - Check                        F",
+      "category": "Food & Supplies",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587162,
+      "type": "expense",
+      "amount": 231.58,
+      "vendor": "ACH Payment IPFS866-412-2431 IPFSPMTMAW",
+      "category": "Insurance",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587163,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587164,
+      "type": "expense",
+      "amount": 121,
+      "vendor": "Check #4718 - Check",
+      "category": "Payroll",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587165,
+      "type": "income",
+      "amount": 750,
+      "vendor": "ACH Deposit Square Inc SQ260106 T2199055",
+      "category": "Food Sales",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587166,
+      "type": "income",
+      "amount": 4544.73,
+      "vendor": "ACH Deposit UBER USA, LLC PARTNER",
+      "category": "Delivery/Takeout",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587167,
+      "type": "transfer",
+      "amount": 1900,
+      "vendor": "Transfer debit",
+      "category": "Transfer",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587168,
+      "type": "transfer",
+      "amount": 560.7,
+      "vendor": "ACH Payment 1ST BANKCARD CTR CR CRD PMT CREDIT CARD PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587169,
+      "type": "expense",
+      "amount": 706.17,
+      "vendor": "ACH Payment NRG BUS. 0320D DIRECT DEBIT",
+      "category": "Utilities",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587170,
+      "type": "expense",
+      "amount": 27.88,
+      "vendor": "ACH Payment CENTRAL SECURITY ACH",
+      "category": "Maintenance & Repairs",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587171,
+      "type": "expense",
+      "amount": 1705.46,
+      "vendor": "Check #4713 - Check                        F",
+      "category": "Food & Supplies",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587172,
+      "type": "income",
+      "amount": 2200,
+      "vendor": "ACH Deposit Square Inc SQ260105 T2198878",
+      "category": "Food Sales",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587173,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587174,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 8002017337",
+      "category": "Professional Services",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587175,
+      "type": "income",
+      "amount": 47.97,
+      "vendor": "ACH Payment Square Inc SQ260102 T2198610",
+      "category": "Food Sales",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587176,
+      "type": "income",
+      "amount": 10.66,
+      "vendor": "ACH Payment Square Inc SQ260102 T2198610",
+      "category": "Food Sales",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587177,
+      "type": "expense",
+      "amount": 176.25,
+      "vendor": "ACH Payment FlashFundingSvcs 800201F337",
+      "category": "Professional Services",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587178,
+      "type": "income",
+      "amount": 82.08,
+      "vendor": "ACH Payment Square Inc SQ260102 T2198610",
+      "category": "Food Sales",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587179,
+      "type": "income",
+      "amount": 850,
+      "vendor": "ACH Deposit Square Inc SQ260101 T2198488",
+      "category": "Food Sales",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587180,
+      "type": "transfer",
+      "amount": 173.54,
+      "vendor": "ACH Payment Credit Key       CreditFKey",
+      "category": "Credit Card Payment",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328587181,
+      "type": "income",
+      "amount": 300,
+      "vendor": "ACH Deposit Square Inc SQ260102 T2198624",
+      "category": "Food Sales",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594298,
+      "type": "expense",
+      "amount": 22.75,
+      "vendor": "Maintenance Fee",
+      "category": "Bank Fees",
+      "date": "2026-01-31",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594299,
+      "type": "expense",
+      "amount": 10.9,
+      "vendor": "OD Interest Chrg",
+      "category": "Bank Fees",
+      "date": "2026-01-31",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594300,
+      "type": "income",
+      "amount": 241.15,
+      "vendor": "ACH Deposit GRUBHUB INC      Jan Actvty",
+      "category": "Delivery/Takeout",
+      "date": "2026-01-30",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594301,
+      "type": "expense",
+      "amount": 34.99,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-30",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594302,
+      "type": "expense",
+      "amount": 31.3,
+      "vendor": "ACH - IAT IAT PAYPAL NGUYEN MINH LAM VN*824060\\",
+      "category": "Operations",
+      "date": "2026-01-30",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594303,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-30",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594304,
+      "type": "transfer",
+      "amount": 100,
+      "vendor": "ACH Payment MERCURY FBT PAYMENT FPPFatch12657",
+      "category": "Credit Card Payment",
+      "date": "2026-01-30",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594305,
+      "type": "income",
+      "amount": 800,
+      "vendor": "ACH Deposit Square Inc       OuiEatsRic",
+      "category": "Food Sales",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594306,
+      "type": "expense",
+      "amount": 211.86,
+      "vendor": "ACH Payment UPSTART NETWORK LOAN ASFET",
+      "category": "Professional Services",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594307,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594308,
+      "type": "transfer",
+      "amount": 70.3,
+      "vendor": "ACH Payment MERCURY CARD FBT PAYMENF FPPBatch12623",
+      "category": "Credit Card Payment",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594309,
+      "type": "income",
+      "amount": 550,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594310,
+      "type": "transfer",
+      "amount": 500,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594311,
+      "type": "transfer",
+      "amount": 600,
+      "vendor": "ACH Payment SAMS             SYF PAFMNT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-29",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594312,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594313,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit 518LL Corporatio Bluevine AUTOMATED PAYMENT",
+      "category": "Other Income",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594314,
+      "type": "expense",
+      "amount": 100,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594315,
+      "type": "income",
+      "amount": 2000,
+      "vendor": "ACH Deposit 518LL Corporatio Bluevine AUTOMATED PAYMENT",
+      "category": "Other Income",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594316,
+      "type": "transfer",
+      "amount": 2900,
+      "vendor": "Transfer debit",
+      "category": "Transfer",
+      "date": "2026-01-28",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594317,
+      "type": "expense",
+      "amount": 1712.2,
+      "vendor": "Check #4057 - Check                        F",
+      "category": "Food & Supplies",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594318,
+      "type": "expense",
+      "amount": 358.89,
+      "vendor": "ACH Payment T-MOBILE PCS SVC 800-93F-8997",
+      "category": "Utilities",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594319,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594320,
+      "type": "expense",
+      "amount": 230.45,
+      "vendor": "ACH Payment UPSTART NETWORK UPST LOFNS",
+      "category": "Professional Services",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594321,
+      "type": "income",
+      "amount": 3900,
+      "vendor": "Internet Deposit IB XFR FRM COMMERCIAL XXXXXX4097",
+      "category": "Food Sales",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594322,
+      "type": "expense",
+      "amount": 75,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH   F",
+      "category": "Equipment",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594323,
+      "type": "expense",
+      "amount": 472.3,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594324,
+      "type": "expense",
+      "amount": 10.86,
+      "vendor": "ACH Payment PAYPAL INST XFER 260126PPZM1N",
+      "category": "Operations",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594325,
+      "type": "expense",
+      "amount": 100,
+      "vendor": "ACH Payment Stash Cash Mngt Stash  F",
+      "category": "Equipment",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594326,
+      "type": "transfer",
+      "amount": 100,
+      "vendor": "ACH Payment Synchrony card SYF PAYMFT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594327,
+      "type": "expense",
+      "amount": 230,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594328,
+      "type": "expense",
+      "amount": 483,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594329,
+      "type": "expense",
+      "amount": 72.5,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH   F",
+      "category": "Equipment",
+      "date": "2026-01-27",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594330,
+      "type": "transfer",
+      "amount": 166.13,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRM.COM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594331,
+      "type": "transfer",
+      "amount": 3.43,
+      "vendor": "ACH Payment Synchrony Bank CC PYMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594332,
+      "type": "expense",
+      "amount": 32.46,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594333,
+      "type": "expense",
+      "amount": 27.05,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594334,
+      "type": "transfer",
+      "amount": 247.01,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRM.COM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594335,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594336,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594337,
+      "type": "transfer",
+      "amount": 400,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594338,
+      "type": "expense",
+      "amount": 10,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594339,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594340,
+      "type": "expense",
+      "amount": 70,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH",
+      "category": "Equipment",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594341,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594342,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "Internet Deposit IB XFR FRM COMMERCIAL XXXXXX4097",
+      "category": "Food Sales",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594343,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594344,
+      "type": "expense",
+      "amount": 10,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-26",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594345,
+      "type": "income",
+      "amount": 100.69,
+      "vendor": "ACH Deposit GRUBHUB INC      Jan Actvty",
+      "category": "Delivery/Takeout",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594346,
+      "type": "transfer",
+      "amount": 250,
+      "vendor": "ACH Payment Credit One Bank Payment Credit One Bank,N.A.",
+      "category": "Credit Card Payment",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594347,
+      "type": "transfer",
+      "amount": 93.55,
+      "vendor": "ACH Payment TARGET CARD SRVC PAYMENT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594348,
+      "type": "transfer",
+      "amount": 410.88,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594349,
+      "type": "expense",
+      "amount": 26.03,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594350,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594351,
+      "type": "income",
+      "amount": 510,
+      "vendor": "Internet Deposit IB XFR FRM COMMERCIAL XXXXXX4097",
+      "category": "Food Sales",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594352,
+      "type": "expense",
+      "amount": 1,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-23",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594353,
+      "type": "transfer",
+      "amount": 380.14,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594354,
+      "type": "expense",
+      "amount": 4.99,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594355,
+      "type": "transfer",
+      "amount": 246.15,
+      "vendor": "ACH Payment Synchrony card SYF PAYMFT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594356,
+      "type": "transfer",
+      "amount": 63.62,
+      "vendor": "ACH Payment Synchrony Bank CC PYMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594357,
+      "type": "transfer",
+      "amount": 38.95,
+      "vendor": "ACH Payment CITI AUTOPAY PAYMENT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594358,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594359,
+      "type": "expense",
+      "amount": 308.1,
+      "vendor": "ACH Payment Reliant Energy 0121D DIFECT DEBITING",
+      "category": "Utilities",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594360,
+      "type": "income",
+      "amount": 500,
+      "vendor": "Internet Deposit IB XFR FRM COMMERCIAL XXXXXX4097",
+      "category": "Food Sales",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594361,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit Square Inc       OuiEatsRic",
+      "category": "Food Sales",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594362,
+      "type": "expense",
+      "amount": 24.89,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594363,
+      "type": "expense",
+      "amount": 175,
+      "vendor": "Check #4108 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594364,
+      "type": "transfer",
+      "amount": 70.32,
+      "vendor": "ACH Payment MERCURY CARD FBT PAYMENF FPPBatch12341",
+      "category": "Credit Card Payment",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594365,
+      "type": "expense",
+      "amount": 35.96,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-22",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594366,
+      "type": "expense",
+      "amount": 41.8,
+      "vendor": "ACH Payment HARLAND CLARKE CHK ORDER CHECK ORDER BILLING",
+      "category": "Payroll",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594367,
+      "type": "transfer",
+      "amount": 100,
+      "vendor": "ACH Payment SAMS             SYF PAYMNT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594368,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-21",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594369,
+      "type": "transfer",
+      "amount": 786.99,
+      "vendor": "ACH Payment WELLS FARGO CARD CCPYMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594370,
+      "type": "transfer",
+      "amount": 471.41,
+      "vendor": "ACH Payment BK OF AMER MC    ONLINE PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594371,
+      "type": "expense",
+      "amount": 75,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH",
+      "category": "Equipment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594372,
+      "type": "expense",
+      "amount": 10,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594373,
+      "type": "transfer",
+      "amount": 1000,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594374,
+      "type": "expense",
+      "amount": 10,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594375,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594376,
+      "type": "transfer",
+      "amount": 34.9,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRM.COM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594377,
+      "type": "expense",
+      "amount": 24,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594378,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594379,
+      "type": "expense",
+      "amount": 100,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594380,
+      "type": "expense",
+      "amount": 97.41,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594381,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594382,
+      "type": "expense",
+      "amount": 36.19,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594383,
+      "type": "transfer",
+      "amount": 318.55,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594384,
+      "type": "expense",
+      "amount": 72.5,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH",
+      "category": "Equipment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594385,
+      "type": "expense",
+      "amount": 3.69,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594386,
+      "type": "transfer",
+      "amount": 27.27,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594387,
+      "type": "income",
+      "amount": 6500,
+      "vendor": "Internet Deposit IB XFR FRM COMMERCIAL XXXXXX4097",
+      "category": "Food Sales",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594388,
+      "type": "expense",
+      "amount": 2.99,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594389,
+      "type": "expense",
+      "amount": 19.68,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594390,
+      "type": "transfer",
+      "amount": 541.43,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594391,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594392,
+      "type": "transfer",
+      "amount": 672.47,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRM.COM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594393,
+      "type": "expense",
+      "amount": 10,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594394,
+      "type": "expense",
+      "amount": 100,
+      "vendor": "ACH Payment Stash Cash Mngt Stash",
+      "category": "Equipment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594395,
+      "type": "transfer",
+      "amount": 133.33,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRM.COM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594396,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594397,
+      "type": "expense",
+      "amount": 70,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH",
+      "category": "Equipment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594398,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594399,
+      "type": "transfer",
+      "amount": 1232.42,
+      "vendor": "ACH Payment AMEX EPAYMENT    ACH PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594400,
+      "type": "transfer",
+      "amount": 476.35,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRM.COM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594401,
+      "type": "expense",
+      "amount": 14.06,
+      "vendor": "ACH Payment PAYPAL INST XFER 260119PPZ3J9",
+      "category": "Operations",
+      "date": "2026-01-20",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594402,
+      "type": "transfer",
+      "amount": 50,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594403,
+      "type": "transfer",
+      "amount": 143.81,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRM.COM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594404,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594405,
+      "type": "expense",
+      "amount": 28.56,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594406,
+      "type": "transfer",
+      "amount": 322,
+      "vendor": "ACH Payment DISCOVER E-PAYMENT DC PFMNTS DCIDPIINT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594407,
+      "type": "income",
+      "amount": 155.42,
+      "vendor": "ACH Deposit GRUBHUB INC      Jan Actvty",
+      "category": "Delivery/Takeout",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594408,
+      "type": "expense",
+      "amount": 600,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594409,
+      "type": "transfer",
+      "amount": 150,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594410,
+      "type": "transfer",
+      "amount": 124.16,
+      "vendor": "ACH Payment COMENITY PAY IO WEB PYMT 800-395-5714",
+      "category": "Credit Card Payment",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594411,
+      "type": "income",
+      "amount": 1300,
+      "vendor": "Internet Deposit IB XFR FRM COMMERCIAL XXXXXX4097",
+      "category": "Food Sales",
+      "date": "2026-01-16",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594412,
+      "type": "income",
+      "amount": 500,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594413,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594414,
+      "type": "transfer",
+      "amount": 50,
+      "vendor": "ACH Payment SAMS             SYF PAFMNT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594415,
+      "type": "expense",
+      "amount": 349.06,
+      "vendor": "ACH Payment VW CREDIT, TEL. WEB  DEFIT 00000000000000002",
+      "category": "Vehicle Expense",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594416,
+      "type": "transfer",
+      "amount": 32.64,
+      "vendor": "ACH Payment CAPITAL ONE CRCARDPMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594417,
+      "type": "transfer",
+      "amount": 70.32,
+      "vendor": "ACH Payment MERCURY CARD FBT PAYMENF FPPBatch12089",
+      "category": "Credit Card Payment",
+      "date": "2026-01-15",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594418,
+      "type": "income",
+      "amount": 100,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-14",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594419,
+      "type": "expense",
+      "amount": 100,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-14",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594420,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-14",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594421,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594422,
+      "type": "expense",
+      "amount": 10,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594423,
+      "type": "expense",
+      "amount": 72.5,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH   F",
+      "category": "Equipment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594424,
+      "type": "expense",
+      "amount": 289.18,
+      "vendor": "ACH Payment UPGRADE, INC. PAYMENT YF",
+      "category": "Professional Services",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594425,
+      "type": "transfer",
+      "amount": 100,
+      "vendor": "ACH Payment SAMS             SYF PAFMNT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594426,
+      "type": "expense",
+      "amount": 24.55,
+      "vendor": "ACH Payment PAYPAL INST XFER 260111FPZIFR",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594427,
+      "type": "expense",
+      "amount": 100,
+      "vendor": "ACH Payment Stash Cash Mngt Stash  F",
+      "category": "Equipment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594428,
+      "type": "transfer",
+      "amount": 500,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594429,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594430,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594431,
+      "type": "transfer",
+      "amount": 100,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594432,
+      "type": "expense",
+      "amount": 70,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH   F",
+      "category": "Equipment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594433,
+      "type": "transfer",
+      "amount": 84.95,
+      "vendor": "ACH Payment BK OF AMER MC    ONLINEFPMT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594434,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594435,
+      "type": "expense",
+      "amount": 75,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH   F",
+      "category": "Equipment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594436,
+      "type": "income",
+      "amount": 1000,
+      "vendor": "ACH Deposit 518LL Corporatio Bluevine AUTOMATED PAYMENT",
+      "category": "Other Income",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594437,
+      "type": "expense",
+      "amount": 10,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594438,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594439,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594440,
+      "type": "transfer",
+      "amount": 691.75,
+      "vendor": "ACH Payment CAPITAL ONE CRCARDPMT  F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594441,
+      "type": "income",
+      "amount": 1200,
+      "vendor": "transfer credit",
+      "category": "Other Income",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594442,
+      "type": "expense",
+      "amount": 11.7,
+      "vendor": "ACH Payment PAYPAL INST XFER 260111FPZIH9",
+      "category": "Operations",
+      "date": "2026-01-13",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594443,
+      "type": "expense",
+      "amount": 724.88,
+      "vendor": "Check #4134 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594444,
+      "type": "expense",
+      "amount": 14.06,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594445,
+      "type": "transfer",
+      "amount": 100,
+      "vendor": "ACH Payment SYNCHRONY BANK PAYMENT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594446,
+      "type": "income",
+      "amount": 700,
+      "vendor": "Internet Deposit IB XFR FRM COMMERCIAL XXXXXX4097",
+      "category": "Food Sales",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594447,
+      "type": "income",
+      "amount": 140,
+      "vendor": "transfer credit",
+      "category": "Other Income",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594448,
+      "type": "expense",
+      "amount": 1,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-12",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594449,
+      "type": "income",
+      "amount": 1250,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594450,
+      "type": "income",
+      "amount": 49.15,
+      "vendor": "ACH Deposit GRUBHUB INC      Jan Actvty",
+      "category": "Delivery/Takeout",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594451,
+      "type": "transfer",
+      "amount": 166.13,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRMFCOM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594452,
+      "type": "transfer",
+      "amount": 35.44,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRMFCOM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594453,
+      "type": "expense",
+      "amount": 800,
+      "vendor": "Check #4139 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594454,
+      "type": "expense",
+      "amount": 15.99,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594455,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594456,
+      "type": "transfer",
+      "amount": 100,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594457,
+      "type": "income",
+      "amount": 250,
+      "vendor": "transfer credit",
+      "category": "Other Income",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594458,
+      "type": "expense",
+      "amount": 430,
+      "vendor": "Check #4135 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-09",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594459,
+      "type": "expense",
+      "amount": 575.25,
+      "vendor": "Check #4138 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-08",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594460,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-08",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594461,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-08",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594462,
+      "type": "transfer",
+      "amount": 500,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-08",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594463,
+      "type": "income",
+      "amount": 1100,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-08",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594464,
+      "type": "expense",
+      "amount": 2.13,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANT TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-08",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594465,
+      "type": "expense",
+      "amount": 100,
+      "vendor": "ACH Payment Stash Cash Mngt Stash  F",
+      "category": "Equipment",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594466,
+      "type": "expense",
+      "amount": 870,
+      "vendor": "Check #4136 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594467,
+      "type": "expense",
+      "amount": 30,
+      "vendor": "Return Check Chrg Item(s) Presented 01/06/2026",
+      "category": "Payroll",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594468,
+      "type": "expense",
+      "amount": 575.25,
+      "vendor": "Check #4137 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594469,
+      "type": "transfer",
+      "amount": 100,
+      "vendor": "ACH Payment COMN CAP APY F1 AUTO PAF 800-395-5714",
+      "category": "Credit Card Payment",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594470,
+      "type": "expense",
+      "amount": 100,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594471,
+      "type": "income",
+      "amount": 2300,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594472,
+      "type": "expense",
+      "amount": 592.8,
+      "vendor": "Check #4132 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-07",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594473,
+      "type": "expense",
+      "amount": 9.31,
+      "vendor": "ACH Payment PAYPAL INST XFER 260103FPZZN0",
+      "category": "Operations",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594474,
+      "type": "transfer",
+      "amount": 100,
+      "vendor": "ACH Payment CAPITAL ONE MOBILE PMT F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594475,
+      "type": "expense",
+      "amount": 14.06,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594476,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594477,
+      "type": "transfer",
+      "amount": 250,
+      "vendor": "ACH Payment SAMS             SYF PAFMNT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594478,
+      "type": "transfer",
+      "amount": 53,
+      "vendor": "ACH Payment AMEX EPAYMENT    ACH PMF",
+      "category": "Credit Card Payment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594479,
+      "type": "expense",
+      "amount": 27.28,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594480,
+      "type": "expense",
+      "amount": 70,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH   F",
+      "category": "Equipment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594481,
+      "type": "expense",
+      "amount": 501,
+      "vendor": "Check #4071 - Check                        F",
+      "category": "Payroll",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594482,
+      "type": "expense",
+      "amount": 75,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH   F",
+      "category": "Equipment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594483,
+      "type": "expense",
+      "amount": 223.86,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594484,
+      "type": "expense",
+      "amount": 12,
+      "vendor": "ACH Payment Stash Financial Stash Subs",
+      "category": "Bank Fees",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594485,
+      "type": "income",
+      "amount": 1900,
+      "vendor": "transfer credit",
+      "category": "Other Income",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594486,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594487,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594488,
+      "type": "transfer",
+      "amount": 145.8,
+      "vendor": "ACH Payment DISCOVER E-PAYMENT DC PFMNTS DCIDPIINT",
+      "category": "Credit Card Payment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594489,
+      "type": "expense",
+      "amount": 72.5,
+      "vendor": "ACH Payment STASH CAPITAL (S ACH   F",
+      "category": "Equipment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594490,
+      "type": "transfer",
+      "amount": 166.13,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRMFCOM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594491,
+      "type": "transfer",
+      "amount": 110.75,
+      "vendor": "ACH Payment AFFIRM.COM PAYME AFFIRMFCOM",
+      "category": "Credit Card Payment",
+      "date": "2026-01-06",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594492,
+      "type": "transfer",
+      "amount": 38.96,
+      "vendor": "ACH Payment CITI AUTOPAY PAYMENT   F",
+      "category": "Credit Card Payment",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594493,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594494,
+      "type": "expense",
+      "amount": 12.18,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594495,
+      "type": "expense",
+      "amount": 190,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594496,
+      "type": "expense",
+      "amount": 10,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594497,
+      "type": "expense",
+      "amount": 6.5,
+      "vendor": "ACH Payment ALLSTATE INS MOTORCLUB FCH.ARSN04071 S",
+      "category": "Insurance",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594498,
+      "type": "income",
+      "amount": 37.31,
+      "vendor": "ACH Payment Square Inc       SQ2601F2",
+      "category": "Food Sales",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594499,
+      "type": "expense",
+      "amount": 210.05,
+      "vendor": "ACH Payment PROSPER MARKETPL MPLI 3FY",
+      "category": "Professional Services",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594500,
+      "type": "expense",
+      "amount": 10,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594501,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594502,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594503,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594504,
+      "type": "income",
+      "amount": 500,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594505,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-05",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594506,
+      "type": "income",
+      "amount": 900,
+      "vendor": "Deposit",
+      "category": "Food Sales",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594507,
+      "type": "expense",
+      "amount": 108.31,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594508,
+      "type": "transfer",
+      "amount": 149.58,
+      "vendor": "ACH Payment AMEX EPAYMENT    ACH PMF",
+      "category": "Credit Card Payment",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594509,
+      "type": "expense",
+      "amount": 921,
+      "vendor": "ACH Payment ALLY ALLY PAYMT        F",
+      "category": "Vehicle Expense",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594510,
+      "type": "expense",
+      "amount": 5,
+      "vendor": "ACH Payment PAYPAL TRANSFER        F",
+      "category": "Operations",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594511,
+      "type": "income",
+      "amount": 66.63,
+      "vendor": "ACH Deposit GRUBHUB INC      Dec Actvty",
+      "category": "Delivery/Takeout",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594512,
+      "type": "expense",
+      "amount": 240.69,
+      "vendor": "ACH Payment GEXA ENERGY ELECTRIC 86F-329-4392",
+      "category": "Utilities",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594513,
+      "type": "expense",
+      "amount": 87.19,
+      "vendor": "ACH Payment PAYPAL INST XFER INSTANF TRANSFER",
+      "category": "Operations",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594514,
+      "type": "expense",
+      "amount": 217,
+      "vendor": "ACH Payment Republic Finance Web PaF ,LLC",
+      "category": "Professional Services",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774328594515,
+      "type": "expense",
+      "amount": 50,
+      "vendor": "ACH Payment CITY OF HOUSTON WATER BFLL UTILITY CUST SERV",
+      "category": "Utilities",
+      "date": "2026-01-02",
+      "account": "Bank",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Imported from CSV"
+    }
+  ],
+  "customExpCats": [],
+  "customIncCats": [],
+  "vendorRules": [
+    {
+      "match": "SQUARE INC",
+      "type": "income",
+      "category": "Food Sales",
+      "account": "Bank"
+    },
+    {
+      "match": "GRUBHUB",
+      "type": "income",
+      "category": "Delivery/Takeout",
+      "account": "Bank"
+    },
+    {
+      "match": "UBER USA",
+      "type": "income",
+      "category": "Delivery/Takeout",
+      "account": "Bank"
+    },
+    {
+      "match": "BLUEVINE",
+      "type": "income",
+      "category": "Other Income",
+      "account": "Bank"
+    },
+    {
+      "match": "PIPE CAPITAL",
+      "type": "income",
+      "category": "Other Income",
+      "account": "Bank"
+    },
+    {
+      "match": "FLASHFUNDING",
+      "type": "expense",
+      "category": "Professional Services",
+      "account": "Bank"
+    },
+    {
+      "match": "PAYPAL INST XFER",
+      "type": "expense",
+      "category": "Operations",
+      "account": "Bank"
+    },
+    {
+      "match": "PAYPAL TRANSFER",
+      "type": "expense",
+      "category": "Operations",
+      "account": "Bank"
+    },
+    {
+      "match": "PAYPAL",
+      "type": "expense",
+      "category": "Operations",
+      "account": "Bank"
+    },
+    {
+      "match": "IAT PAYPAL",
+      "type": "expense",
+      "category": "Food & Supplies",
+      "account": "Bank"
+    },
+    {
+      "match": "MERCURY FBT",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "CPENERGY",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "ENTEX",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "UPSTART",
+      "type": "expense",
+      "category": "Professional Services",
+      "account": "Bank"
+    },
+    {
+      "match": "CAPITAL ONE MOBILE",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "SAMS CLUB",
+      "type": "transfer",
+      "category": "Transfer",
+      "account": "Bank"
+    },
+    {
+      "match": "T-MOBILE",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "STASH CAPITAL",
+      "type": "expense",
+      "category": "Equipment",
+      "account": "Bank"
+    },
+    {
+      "match": "STASH CASH",
+      "type": "expense",
+      "category": "Equipment",
+      "account": "Bank"
+    },
+    {
+      "match": "SYNCHRONY",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "THE HARTFORD",
+      "type": "expense",
+      "category": "Insurance",
+      "account": "Bank"
+    },
+    {
+      "match": "AMEX EPAYMENT",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "AMEX",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "IRS USATAXPYMT",
+      "type": "expense",
+      "category": "Payroll Taxes",
+      "account": "Bank"
+    },
+    {
+      "match": "IRS",
+      "type": "expense",
+      "category": "Payroll Taxes",
+      "account": "Bank"
+    },
+    {
+      "match": "PAYR TAX",
+      "type": "expense",
+      "category": "Payroll Taxes",
+      "account": "Bank"
+    },
+    {
+      "match": "SVCING SOLUTIONS",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "CHASE CREDIT",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "AFFIRM",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "CREDIT ONE",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "TARGET CARD",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "CREDIT KEY",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "CITI",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "RELIANT ENERGY",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "GAMSA",
+      "type": "expense",
+      "category": "Equipment",
+      "account": "Bank"
+    },
+    {
+      "match": "HARLAND CLARKE",
+      "type": "expense",
+      "category": "Office Supplies",
+      "account": "Bank"
+    },
+    {
+      "match": "GJBRAUN",
+      "type": "expense",
+      "category": "Rent",
+      "account": "Bank"
+    },
+    {
+      "match": "COMCAST",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "XFINITY",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "WELLS FARGO",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "BK OF AMER",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "BANK OF AMER",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "JOHN MOORE",
+      "type": "expense",
+      "category": "Maintenance & Repairs",
+      "account": "Bank"
+    },
+    {
+      "match": "DISCOVER",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "COMENITY",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "VW CREDIT",
+      "type": "expense",
+      "category": "Vehicle Expense",
+      "account": "Bank"
+    },
+    {
+      "match": "RETURN CHECK",
+      "type": "expense",
+      "category": "Bank Fees",
+      "account": "Bank"
+    },
+    {
+      "match": "LANE EQUIPMENT",
+      "type": "expense",
+      "category": "Equipment",
+      "account": "Bank"
+    },
+    {
+      "match": "UPGRADE",
+      "type": "expense",
+      "category": "Professional Services",
+      "account": "Bank"
+    },
+    {
+      "match": "COMN CAP",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "1ST BANKCARD",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "NRG",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "CENTRAL SECURITY",
+      "type": "expense",
+      "category": "Maintenance & Repairs",
+      "account": "Bank"
+    },
+    {
+      "match": "ALLSTATE",
+      "type": "expense",
+      "category": "Insurance",
+      "account": "Bank"
+    },
+    {
+      "match": "PROSPER",
+      "type": "expense",
+      "category": "Professional Services",
+      "account": "Bank"
+    },
+    {
+      "match": "ALLY",
+      "type": "expense",
+      "category": "Vehicle Expense",
+      "account": "Bank"
+    },
+    {
+      "match": "GEXA ENERGY",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "REPUBLIC FINANCE",
+      "type": "expense",
+      "category": "Professional Services",
+      "account": "Bank"
+    },
+    {
+      "match": "CITY OF HOUSTON WATER",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "HOUSTON WATER",
+      "type": "expense",
+      "category": "Utilities",
+      "account": "Bank"
+    },
+    {
+      "match": "IB XFR TO COMMERCIAL",
+      "type": "transfer",
+      "category": "Transfer",
+      "account": "Bank"
+    },
+    {
+      "match": "INTERNET WITHDRAWAL",
+      "type": "transfer",
+      "category": "Transfer",
+      "account": "Bank"
+    },
+    {
+      "match": "TRANSFER DEBIT",
+      "type": "transfer",
+      "category": "Transfer",
+      "account": "Bank"
+    },
+    {
+      "match": "TRANSFER CREDIT",
+      "type": "income",
+      "category": "Other Income",
+      "account": "Bank"
+    },
+    {
+      "match": "DEPOSIT",
+      "type": "income",
+      "category": "Food Sales",
+      "account": "Bank"
+    },
+    {
+      "match": "IPFS",
+      "type": "expense",
+      "category": "Insurance",
+      "account": "Bank"
+    },
+    {
+      "match": "CAPITAL ON TAP",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "CAPITAL ONE TAP",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "SQUARE INC SQ",
+      "type": "income",
+      "category": "Food Sales",
+      "account": "Bank"
+    },
+    {
+      "match": "SQUARE INC PAYR",
+      "type": "expense",
+      "category": "Payroll Taxes",
+      "account": "Bank"
+    },
+    {
+      "match": "MAINTENANCE FEE",
+      "type": "expense",
+      "category": "Bank Fees",
+      "account": "Bank"
+    },
+    {
+      "match": "OD INTEREST",
+      "type": "expense",
+      "category": "Bank Fees",
+      "account": "Bank"
+    },
+    {
+      "match": "MERCURY CARD",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "MERCURY FBT",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "PAYPAL INST XFER",
+      "type": "expense",
+      "category": "Operations",
+      "account": "Bank"
+    },
+    {
+      "match": "PAYPAL TRANSFER",
+      "type": "expense",
+      "category": "Operations",
+      "account": "Bank"
+    },
+    {
+      "match": "PAYPAL",
+      "type": "expense",
+      "category": "Operations",
+      "account": "Bank"
+    },
+    {
+      "match": "IAT PAYPAL",
+      "type": "expense",
+      "category": "Food & Supplies",
+      "account": "Bank"
+    },
+    {
+      "match": "SAMS SYF PAFMNT",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "PAFMNT",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "PAYMNT",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "SAMS SYF",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "SAMS CLUB",
+      "type": "transfer",
+      "category": "Transfer",
+      "account": "Bank"
+    },
+    {
+      "match": "VW CREDIT",
+      "type": "expense",
+      "category": "Vehicle Expense",
+      "account": "Bank"
+    },
+    {
+      "match": "CAPITAL ONE",
+      "type": "transfer",
+      "category": "Credit Card Payment",
+      "account": "Bank"
+    },
+    {
+      "match": "STASH FINANCIAL",
+      "type": "expense",
+      "category": "Bank Fees",
+      "account": "Bank"
+    },
+    {
+      "match": "STASH SUBS",
+      "type": "expense",
+      "category": "Bank Fees",
+      "account": "Bank"
+    },
+    {
+      "match": "ALLY ALLY",
+      "type": "expense",
+      "category": "Vehicle Expense",
+      "account": "Bank"
+    },
+    {
+      "match": "ALLY PAYMT",
+      "type": "expense",
+      "category": "Vehicle Expense",
+      "account": "Bank"
+    }
+  ],
+  "lastSync": "2026-03-24T05:32:49.639Z"
+}
