@@ -3981,6 +3981,16 @@
       "account": "Bank",
       "paymentMethod": "Bank Transfer",
       "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774480642788,
+      "type": "expense",
+      "amount": 950.51,
+      "vendor": "Restaurant Depot",
+      "category": "Food & Supplies",
+      "date": "2026-03-24",
+      "account": "Credit Card",
+      "notes": "Credit Key"
     }
   ],
   "customExpCats": [],
@@ -4545,5 +4555,5 @@
       "account": "Bank"
     }
   ],
-  "lastSync": "2026-03-25T23:16:18.618Z"
+  "lastSync": "2026-03-25T23:17:33.249Z"
 }
