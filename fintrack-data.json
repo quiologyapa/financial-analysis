@@ -3981,6 +3981,16 @@
       "account": "Bank",
       "paymentMethod": "Bank Transfer",
       "notes": "Imported from CSV"
+    },
+    {
+      "id": 1774380941645,
+      "type": "expense",
+      "amount": 950.51,
+      "vendor": "Restaurant Depot",
+      "category": "Food & Supplies",
+      "date": "2026-03-24",
+      "account": "Credit Card",
+      "notes": "Credit Key"
     }
   ],
   "customExpCats": [],
@@ -4353,6 +4363,12 @@
       "account": "Bank"
     },
     {
+      "match": "IB XFR FROM COMMERCIAL",
+      "type": "transfer",
+      "category": "Transfer",
+      "account": "Bank"
+    },
+    {
       "match": "INTERNET WITHDRAWAL",
       "type": "transfer",
       "category": "Transfer",
@@ -4366,8 +4382,14 @@
     },
     {
       "match": "TRANSFER CREDIT",
-      "type": "income",
-      "category": "Other Income",
+      "type": "transfer",
+      "category": "Transfer",
+      "account": "Bank"
+    },
+    {
+      "match": "TRANSFER",
+      "type": "transfer",
+      "category": "Transfer",
       "account": "Bank"
     },
     {
@@ -4521,5 +4543,5 @@
       "account": "Bank"
     }
   ],
-  "lastSync": "2026-03-24T05:32:49.639Z"
+  "lastSync": "2026-03-25T22:57:44.103Z"
 }
